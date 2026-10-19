@@ -1,0 +1,92 @@
+x-airflow-common: &airflow-common
+  build: .
+  image: sys02-airflow:real
+  environment: &airflow-env
+    PYTHONPATH: /opt/airflow/src
+    AIRFLOW__CORE__EXECUTOR: LocalExecutor
+    AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://${POSTGRES_USER:?Set POSTGRES_USER in .env}:${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in .env}@airflow_postgres:5432/${POSTGRES_DB:?Set POSTGRES_DB in .env}
+    AIRFLOW__CORE__FERNET_KEY: ${AIRFLOW_FERNET_KEY:?Set AIRFLOW_FERNET_KEY in .env}
+    AIRFLOW__CORE__PARALLELISM: 4
+    AIRFLOW__CORE__MAX_ACTIVE_TASKS_PER_DAG: 4
+    AIRFLOW__CORE__MAX_ACTIVE_RUNS_PER_DAG: 2
+    AIRFLOW__SCHEDULER__PARSING_PROCESSES: 1
+    AIRFLOW__SCHEDULER__MIN_FILE_PROCESS_INTERVAL: 30
+    AIRFLOW__SCHEDULER__DAG_DIR_LIST_INTERVAL: 60
+    AIRFLOW__CORE__LOAD_EXAMPLES: 'false'
+    AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION: 'false'
+    AIRFLOW__API__AUTH_BACKENDS: airflow.api.auth.backend.basic_auth,airflow.api.auth.backend.session
+    MINIO_ENDPOINT: ${MINIO_ENDPOINT:?Set MINIO_ENDPOINT in .env}
+    MINIO_ACCESS_KEY: ${MINIO_ACCESS_KEY:?Set MINIO_ACCESS_KEY in .env}
+    MINIO_SECRET_KEY: ${MINIO_SECRET_KEY:?Set MINIO_SECRET_KEY in .env}
+    CLICKHOUSE_HOST: ${CLICKHOUSE_HOST:?Set CLICKHOUSE_HOST in .env}
+    CLICKHOUSE_PORT: ${CLICKHOUSE_PORT:?Set CLICKHOUSE_PORT in .env}
+    CLICKHOUSE_USER: ${CLICKHOUSE_USER:?Set CLICKHOUSE_USER in .env}
+    CLICKHOUSE_PASSWORD: ${CLICKHOUSE_PASSWORD:?Set CLICKHOUSE_PASSWORD in .env}
+    SYS06_ALERT_URL: ${SYS06_ALERT_URL:-http://host.docker.internal:8080/alerts}
+    SYS06_ALERT_API_TOKEN: ${SYS06_ALERT_API_TOKEN:-}
+  extra_hosts:
+    - host.docker.internal:host-gateway
+  volumes:
+    - ./dags:/opt/airflow/dags
+    - ./src:/opt/airflow/src
+    - ./logs:/opt/airflow/logs
+    - ./plugins:/opt/airflow/plugins
+  user: "${AIRFLOW_UID:-50000}:0"
+
+services:
+  airflow_postgres:
+    image: postgres:15-alpine
+    container_name: sys02_airflow_postgres
+    # Keep Airflow metadata available after Docker/Desktop restarts.
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:?Set POSTGRES_USER in .env}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in .env}
+      POSTGRES_DB: ${POSTGRES_DB:?Set POSTGRES_DB in .env}
+    ports:
+      - "127.0.0.1:${POSTGRES_HOST_PORT:?Set POSTGRES_HOST_PORT in .env}:5432"
+    volumes:
+      - ./data/postgres:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:?Set POSTGRES_USER in .env} -d ${POSTGRES_DB:?Set POSTGRES_DB in .env}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  airflow_init:
+    <<: *airflow-common
+    container_name: sys02_airflow_init
+    depends_on:
+      airflow_postgres:
+        condition: service_healthy
+    entrypoint: >
+      /bin/bash -c "airflow db migrate && airflow users create --username ${AIRFLOW_ADMIN_USERNAME:?Set AIRFLOW_ADMIN_USERNAME in .env} --firstname Data --lastname Admin --role Admin --email ${AIRFLOW_ADMIN_EMAIL:?Set AIRFLOW_ADMIN_EMAIL in .env} --password ${AIRFLOW_ADMIN_PASSWORD:?Set AIRFLOW_ADMIN_PASSWORD in .env} || true && python -m sys02_orchestration.utils.init_connections || true"
+
+  airflow_webserver:
+    <<: *airflow-common
+    container_name: sys02_airflow_webserver
+    command: webserver
+    depends_on:
+      airflow_postgres:
+        condition: service_healthy
+      airflow_init:
+        condition: service_completed_successfully
+    ports:
+      - "127.0.0.1:${AIRFLOW_WEBSERVER_PORT:?Set AIRFLOW_WEBSERVER_PORT in .env}:8080"
+    healthcheck:
+      test: ["CMD", "curl", "--fail", "http://localhost:8080/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+    restart: unless-stopped
+
+  airflow_scheduler:
+    <<: *airflow-common
+    container_name: sys02_airflow_scheduler
+    command: scheduler
+    depends_on:
+      airflow_postgres:
+        condition: service_healthy
+      airflow_init:
+        condition: service_completed_successfully
+    restart: unless-stopped

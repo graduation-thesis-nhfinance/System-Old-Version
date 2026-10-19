@@ -1,0 +1,9 @@
+services:
+  airflow_scheduler:
+    networks:
+      - default
+      - thesis-network
+
+networks:
+  thesis-network:
+    external: true

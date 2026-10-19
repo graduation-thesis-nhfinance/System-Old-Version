@@ -1,0 +1,1223 @@
+[
+  {
+    "operator": "nhfinanceadmin",
+    "action": "NAVIGATE_SYSTEM_LINK",
+    "target_dag": "SYS-05",
+    "run_key": "SYS-05",
+    "scope": "External Link: MinIO S3 Object Storage Console",
+    "reason": "Security & Auditing: Operator accessed external system portal [MinIO S3 Object Storage Console] (http://localhost:9001)",
+    "airflow_dispatched": false,
+    "is_automated": false,
+    "id": "aud_1791698182951",
+    "timestamp": "2026-10-11T05:56:22.951415+00:00"
+  },
+  {
+    "operator": "nhfinanceadmin",
+    "action": "NAVIGATE_SYSTEM_LINK",
+    "target_dag": "SYS-05",
+    "run_key": "SYS-05",
+    "scope": "External Link: ClickHouse OLAP Web Client",
+    "reason": "Security & Auditing: Operator accessed external system portal [ClickHouse OLAP Web Client] (http://localhost:8123/play)",
+    "airflow_dispatched": false,
+    "is_automated": false,
+    "id": "aud_1791698179056",
+    "timestamp": "2026-10-11T05:56:19.056284+00:00"
+  },
+  {
+    "operator": "nhfinanceadmin",
+    "action": "NAVIGATE_SYSTEM_LINK",
+    "target_dag": "SYS-05",
+    "run_key": "SYS-05",
+    "scope": "External Link: MinIO S3 Object Storage Console",
+    "reason": "Security & Auditing: Operator accessed external system portal [MinIO S3 Object Storage Console] (http://localhost:9001)",
+    "airflow_dispatched": false,
+    "is_automated": false,
+    "id": "aud_1791698116594",
+    "timestamp": "2026-10-11T05:55:16.594351+00:00"
+  },
+  {
+    "operator": "nhfinanceadmin",
+    "action": "NAVIGATE_SYSTEM_LINK",
+    "target_dag": "SYS-05",
+    "run_key": "SYS-05",
+    "scope": "External Link: ClickHouse OLAP Web Client",
+    "reason": "Security & Auditing: Operator accessed external system portal [ClickHouse OLAP Web Client] (http://localhost:8123/play)",
+    "airflow_dispatched": false,
+    "is_automated": false,
+    "id": "aud_1791698033927",
+    "timestamp": "2026-10-11T05:53:53.927734+00:00"
+  },
+  {
+    "operator": "nhfinanceadmin",
+    "action": "NAVIGATE_SYSTEM_LINK",
+    "target_dag": "SYS-05",
+    "run_key": "SYS-05",
+    "scope": "External Link: ClickHouse OLAP Web Client",
+    "reason": "Security & Auditing: Operator accessed external system portal [ClickHouse OLAP Web Client] (http://localhost:8123/play)",
+    "airflow_dispatched": false,
+    "is_automated": false,
+    "id": "aud_1791698014248",
+    "timestamp": "2026-10-11T05:53:34.248236+00:00"
+  },
+  {
+    "operator": "nhfinanceadmin",
+    "action": "NAVIGATE_SYSTEM_LINK",
+    "target_dag": "SYS-02",
+    "run_key": "SYS-02",
+    "scope": "External Link: Apache Airflow Orchestration",
+    "reason": "Security & Auditing: Operator accessed external system portal [Apache Airflow Orchestration] (http://localhost:8085)",
+    "airflow_dispatched": false,
+    "is_automated": false,
+    "id": "aud_1791661514576",
+    "timestamp": "2026-10-10T19:45:14.576747+00:00"
+  },
+  {
+    "operator": "nhfinanceadmin",
+    "action": "NAVIGATE_SYSTEM_LINK",
+    "target_dag": "SYS-02",
+    "run_key": "SYS-02",
+    "scope": "External Link: Apache Airflow Orchestration",
+    "reason": "Security & Auditing: Operator accessed external system portal [Apache Airflow Orchestration] (http://localhost:8085)",
+    "airflow_dispatched": false,
+    "is_automated": false,
+    "id": "aud_1791661485468",
+    "timestamp": "2026-10-10T19:44:45.468839+00:00"
+  },
+  {
+    "operator": "nhfinanceadmin",
+    "action": "NAVIGATE_SYSTEM_LINK",
+    "target_dag": "SYS-02",
+    "run_key": "SYS-02",
+    "scope": "External Link: Apache Airflow Orchestration",
+    "reason": "Security & Auditing: Operator accessed external system portal [Apache Airflow Orchestration] (http://localhost:8085)",
+    "airflow_dispatched": false,
+    "is_automated": false,
+    "id": "aud_1791647938680",
+    "timestamp": "2026-10-10T15:58:58.680715+00:00"
+  },
+  {
+    "operator": "nhfinanceadmin",
+    "action": "NAVIGATE_SYSTEM_LINK",
+    "target_dag": "SYS-02",
+    "run_key": "SYS-02",
+    "scope": "External Link: Apache Airflow Orchestration",
+    "reason": "Security & Auditing: Operator accessed external system portal [Apache Airflow Orchestration] (http://localhost:8085)",
+    "airflow_dispatched": false,
+    "is_automated": false,
+    "id": "aud_1791647256562",
+    "timestamp": "2026-10-10T15:47:36.562455+00:00"
+  },
+  {
+    "action": "PROFILE_UPDATE",
+    "target": "User: Full-stack Engineer (Full-stack Engineer)",
+    "operator": "nhfinanceadmin",
+    "status": "SUCCESS",
+    "detail": "Updated profile 'Full-stack Engineer' (Role: Full-stack Engineer, Status: INACTIVE, Perms: 14).",
+    "id": "aud_1791058789153",
+    "timestamp": "2026-10-03T20:19:49.153128+00:00"
+  },
+  {
+    "action": "PROFILE_STATUS_TOGGLE",
+    "target": "User: Full-stack Engineer",
+    "operator": "nhfinanceadmin",
+    "status": "SUCCESS",
+    "detail": "Changed status of profile 'Full-stack Engineer' to INACTIVE.",
+    "id": "aud_1791058506052",
+    "timestamp": "2026-10-03T20:15:06.052960+00:00"
+  },
+  {
+    "action": "PROFILE_CREATE",
+    "target": "User: Full-stack Engineer (Full-stack Engineer)",
+    "operator": "nhfinanceadmin",
+    "status": "SUCCESS",
+    "detail": "Created profile 'Full-stack Engineer' with role 'Full-stack Engineer' and 11 permissions.",
+    "id": "aud_1791058496761",
+    "timestamp": "2026-10-03T20:14:56.761898+00:00"
+  },
+  {
+    "action": "PROFILE_STATUS_TOGGLE",
+    "target": "User: view-test",
+    "operator": "nhfinanceadmin",
+    "status": "SUCCESS",
+    "detail": "Changed status of profile 'view-test' to INACTIVE.",
+    "id": "aud_1791058412228",
+    "timestamp": "2026-10-03T20:13:32.228196+00:00"
+  },
+  {
+    "action": "PROFILE_CREATE",
+    "target": "User: view-test (Viewer)",
+    "operator": "nhfinanceadmin",
+    "status": "SUCCESS",
+    "detail": "Created profile 'view-test' with role 'Viewer' and 2 permissions.",
+    "id": "aud_1791058408865",
+    "timestamp": "2026-10-03T20:13:28.865575+00:00"
+  },
+  {
+    "action": "PROFILE_DELETE",
+    "target": "User: analyst_user",
+    "operator": "nhfinanceadmin",
+    "status": "SUCCESS",
+    "detail": "Deleted profile credential 'analyst_user' (Viewer).",
+    "id": "aud_1791058372022",
+    "timestamp": "2026-10-03T20:12:52.022657+00:00"
+  },
+  {
+    "action": "PROFILE_UPDATE",
+    "target": "User: DA-tan (Data Analytic)",
+    "operator": "nhfinanceadmin",
+    "status": "SUCCESS",
+    "detail": "Updated profile 'DA-tan' (Role: Data Analytic, Status: ACTIVE, Perms: 5).",
+    "id": "aud_1791058273114",
+    "timestamp": "2026-10-03T20:11:13.114562+00:00"
+  },
+  {
+    "action": "PROFILE_CREATE",
+    "target": "User: DA-tan (Data Analytic)",
+    "operator": "nhfinanceadmin",
+    "status": "SUCCESS",
+    "detail": "Created profile 'DA-tan' with role 'Data Analytic' and 6 permissions.",
+    "id": "aud_1791058219964",
+    "timestamp": "2026-10-03T20:10:19.964358+00:00"
+  },
+  {
+    "action": "PROFILE_STATUS_TOGGLE",
+    "target": "User: data_engineer",
+    "operator": "nhfinanceadmin",
+    "status": "SUCCESS",
+    "detail": "Changed status of profile 'data_engineer' to INACTIVE.",
+    "id": "aud_1791058112608",
+    "timestamp": "2026-10-03T20:08:32.608676+00:00"
+  },
+  {
+    "action": "PROFILE_STATUS_TOGGLE",
+    "target": "User: aieingineer",
+    "operator": "nhfinanceadmin",
+    "status": "SUCCESS",
+    "detail": "Changed status of profile 'aieingineer' to INACTIVE.",
+    "id": "aud_1791058111900",
+    "timestamp": "2026-10-03T20:08:31.900793+00:00"
+  },
+  {
+    "operator": "nhfinanceadmin",
+    "action": "RERUN_SLOT",
+    "target_dag": "04_binance_market_metrics_15m_dag",
+    "run_key": "20261004T030000Z",
+    "scope": "BTCUSDT (klines)",
+    "symbols": [
+      "BTCUSDT"
+    ],
+    "products": [
+      "klines"
+    ],
+    "reason": "Manual rerun_slot by nhfinanceadmin: Single recovery by nhfinanceadmin",
+    "airflow_dispatched": true,
+    "airflow_response": {
+      "success": true,
+      "data": {
+        "conf": {
+          "action": "rerun_slot",
+          "operator": "nhfinanceadmin",
+          "operator_username": "nhfinanceadmin",
+          "products": [
+            "klines"
+          ],
+          "reason": "Single recovery by nhfinanceadmin",
+          "recollection": true,
+          "run_key": "20261004T030000Z",
+          "symbols": [
+            "BTCUSDT"
+          ],
+          "target_date": "2026-10-04",
+          "target_window": "03:00"
+        },
+        "dag_id": "04_binance_market_metrics_15m_dag",
+        "dag_run_id": "manual__2026-10-03T20:05:26.758879+00:00",
+        "data_interval_end": "2026-10-03T20:00:00+00:00",
+        "data_interval_start": "2026-10-03T19:45:00+00:00",
+        "end_date": null,
+        "execution_date": "2026-10-03T20:05:26.758879+00:00",
+        "external_trigger": true,
+        "last_scheduling_decision": null,
+        "logical_date": "2026-10-03T20:05:26.758879+00:00",
+        "note": null,
+        "run_type": "manual",
+        "start_date": null,
+        "state": "queued"
+      }
+    },
+    "id": "aud_1791057927074",
+    "timestamp": "2026-10-03T20:05:27.074401+00:00"
+  },
+  {
+    "action": "PROFILE_UPDATE",
+    "target": "User: aieingineer (Operator)",
+    "operator": "nhfinanceadmin",
+    "status": "SUCCESS",
+    "detail": "Updated profile 'aieingineer' (Role: Operator, Status: ACTIVE, Perms: 6).",
+    "id": "aud_1791057731218",
+    "timestamp": "2026-10-03T20:02:11.218484+00:00"
+  },
+  {
+    "action": "PROFILE_UPDATE",
+    "target": "User: aieingineer (Operator)",
+    "operator": "nhfinanceadmin",
+    "status": "SUCCESS",
+    "detail": "Updated profile 'aieingineer' (Role: Operator, Status: ACTIVE, Perms: 6).",
+    "id": "aud_1791057694908",
+    "timestamp": "2026-10-03T20:01:34.908110+00:00"
+  },
+  {
+    "action": "PROFILE_UPDATE",
+    "target": "User: aieingineer (Operator)",
+    "operator": "nhfinanceadmin",
+    "status": "SUCCESS",
+    "detail": "Updated profile 'aieingineer' (Role: Operator, Status: ACTIVE, Perms: 5).",
+    "id": "aud_1791057677351",
+    "timestamp": "2026-10-03T20:01:17.351077+00:00"
+  },
+  {
+    "action": "PROFILE_DELETE",
+    "target": "User: test_auditor",
+    "operator": "nhfinanceadmin",
+    "status": "SUCCESS",
+    "detail": "Deleted profile credential 'test_auditor' (Test Risk Auditor).",
+    "id": "aud_1791050272666",
+    "timestamp": "2026-10-03T17:57:52.666755+00:00"
+  },
+  {
+    "action": "PROFILE_CREATE",
+    "target": "User: test_auditor (Custom Risk Auditor)",
+    "operator": "nhfinanceadmin",
+    "status": "SUCCESS",
+    "detail": "Created profile 'test_auditor' with role 'Custom Risk Auditor' and 3 permissions.",
+    "id": "aud_1791050272383",
+    "timestamp": "2026-10-03T17:57:52.383583+00:00"
+  },
+  {
+    "action": "PROFILE_CREATE",
+    "target": "User: aieingineer (Operator)",
+    "operator": "nhfinanceadmin",
+    "status": "SUCCESS",
+    "detail": "Created profile 'aieingineer' with role 'Operator' and 4 permissions.",
+    "id": "aud_1791029399813",
+    "timestamp": "2026-10-03T12:09:59.813252+00:00"
+  },
+  {
+    "action": "PROFILE_DELETE",
+    "target": "User: mydethuong",
+    "operator": "nhfinanceadmin",
+    "status": "SUCCESS",
+    "detail": "Deleted profile credential 'mydethuong' (Viewer).",
+    "id": "aud_1790956360505",
+    "timestamp": "2026-10-02T15:52:40.505488+00:00"
+  },
+  {
+    "operator": "nhfinanceadmin",
+    "action": "BATCH_DELETE_TRADING_PAIRS",
+    "target_table": "default.dim_trading_pairs",
+    "pair_ids": [
+      7
+    ],
+    "count": 1,
+    "reason": "Batch deletion of 1 trading pairs by nhfinanceadmin",
+    "clickhouse_synced": true,
+    "id": "aud_1789847521247",
+    "timestamp": "2026-09-19T19:52:01.247199+00:00"
+  },
+  {
+    "operator": "nhfinanceadmin",
+    "action": "BATCH_DELETE_TRADING_PAIRS",
+    "target_table": "default.dim_trading_pairs",
+    "pair_ids": [
+      7
+    ],
+    "count": 1,
+    "reason": "Batch deletion of 1 trading pairs by nhfinanceadmin",
+    "clickhouse_synced": true,
+    "id": "aud_1789846252045",
+    "timestamp": "2026-09-19T19:30:52.045896+00:00"
+  },
+  {
+    "operator": "nhfinanceadmin",
+    "action": "ADD_TRADING_PAIR",
+    "target_table": "default.dim_trading_pairs",
+    "pair_id": 7,
+    "symbol": "FILUSDT",
+    "trading_pair": "FIL/USDT",
+    "reason": "Manual creation of trading pair FILUSDT (FIL/USDT) by nhfinanceadmin",
+    "clickhouse_synced": true,
+    "id": "aud_1789846184579",
+    "timestamp": "2026-09-19T19:29:44.579077+00:00"
+  },
+  {
+    "operator": "nhfinanceadmin",
+    "action": "BATCH_DELETE_TRADING_PAIRS",
+    "target_table": "default.dim_trading_pairs",
+    "pair_ids": [
+      7
+    ],
+    "count": 1,
+    "reason": "Batch deletion of 1 trading pairs by nhfinanceadmin",
+    "clickhouse_synced": true,
+    "id": "aud_1789846162177",
+    "timestamp": "2026-09-19T19:29:22.177793+00:00"
+  },
+  {
+    "operator": "nhfinanceadmin",
+    "action": "DELETE_TRADING_PAIR",
+    "target_table": "default.dim_trading_pairs",
+    "pair_id": 8,
+    "symbol": "NVSTUSDT",
+    "reason": "Manual deletion of trading pair NVSTUSDT (ID: 8) by nhfinanceadmin",
+    "clickhouse_synced": true,
+    "id": "aud_1789844881824",
+    "timestamp": "2026-09-19T19:08:01.824217+00:00"
+  },
+  {
+    "operator": "nhfinanceadmin",
+    "action": "ADD_TRADING_PAIR",
+    "target_table": "default.dim_trading_pairs",
+    "pair_id": 8,
+    "symbol": "NVSTUSDT",
+    "trading_pair": "NVST/USDT",
+    "reason": "Manual creation of trading pair NVSTUSDT (NVST/USDT) by nhfinanceadmin",
+    "clickhouse_synced": true,
+    "id": "aud_1789844878370",
+    "timestamp": "2026-09-19T19:07:58.370251+00:00"
+  },
+  {
+    "operator": "nhfinanceadmin",
+    "action": "ADD_TRADING_PAIR",
+    "target_table": "default.dim_trading_pairs",
+    "pair_id": 7,
+    "symbol": "FILUSDT",
+    "trading_pair": "FIL/USDT",
+    "reason": "Manual creation of trading pair FILUSDT (FIL/USDT) by nhfinanceadmin",
+    "clickhouse_synced": true,
+    "id": "aud_1789844841908",
+    "timestamp": "2026-09-19T19:07:21.908476+00:00"
+  },
+  {
+    "operator": "nhfinanceadmin",
+    "action": "DELETE_TRADING_PAIR",
+    "target_table": "default.dim_trading_pairs",
+    "pair_id": 7,
+    "symbol": "FILUSDT",
+    "reason": "Manual deletion of trading pair FILUSDT (ID: 7) by nhfinanceadmin",
+    "clickhouse_synced": true,
+    "id": "aud_1789844057284",
+    "timestamp": "2026-09-19T18:54:17.284322+00:00"
+  },
+  {
+    "operator": "nhfinanceadmin",
+    "action": "ADD_TRADING_PAIR",
+    "target_table": "default.dim_trading_pairs",
+    "pair_id": 7,
+    "symbol": "FILUSDT",
+    "trading_pair": "FIL/USDT",
+    "reason": "Manual creation of trading pair FILUSDT (FIL/USDT) by nhfinanceadmin",
+    "clickhouse_synced": true,
+    "id": "aud_1789844018988",
+    "timestamp": "2026-09-19T18:53:38.988731+00:00"
+  },
+  {
+    "action": "PROFILE_STATUS_TOGGLE",
+    "target": "User: data_engineer",
+    "operator": "nhfinanceadmin",
+    "status": "SUCCESS",
+    "detail": "Changed status of profile 'data_engineer' to ACTIVE.",
+    "id": "aud_1789843400331",
+    "timestamp": "2026-09-19T18:43:20.331957+00:00"
+  },
+  {
+    "action": "PROFILE_STATUS_TOGGLE",
+    "target": "User: analyst_user",
+    "operator": "nhfinanceadmin",
+    "status": "SUCCESS",
+    "detail": "Changed status of profile 'analyst_user' to ACTIVE.",
+    "id": "aud_1789843398395",
+    "timestamp": "2026-09-19T18:43:18.395519+00:00"
+  },
+  {
+    "action": "PROFILE_STATUS_TOGGLE",
+    "target": "User: data_engineer",
+    "operator": "nhfinanceadmin",
+    "status": "SUCCESS",
+    "detail": "Changed status of profile 'data_engineer' to INACTIVE.",
+    "id": "aud_1789843394976",
+    "timestamp": "2026-09-19T18:43:14.976290+00:00"
+  },
+  {
+    "action": "PROFILE_STATUS_TOGGLE",
+    "target": "User: mydethuong",
+    "operator": "nhfinanceadmin",
+    "status": "SUCCESS",
+    "detail": "Changed status of profile 'mydethuong' to INACTIVE.",
+    "id": "aud_1789843393239",
+    "timestamp": "2026-09-19T18:43:13.240198+00:00"
+  },
+  {
+    "action": "PROFILE_STATUS_TOGGLE",
+    "target": "User: mydethuong",
+    "operator": "nhfinanceadmin",
+    "status": "SUCCESS",
+    "detail": "Changed status of profile 'mydethuong' to ACTIVE.",
+    "id": "aud_1789841193913",
+    "timestamp": "2026-09-19T18:06:33.913101+00:00"
+  },
+  {
+    "action": "PROFILE_STATUS_TOGGLE",
+    "target": "User: mydethuong",
+    "operator": "nhfinanceadmin",
+    "status": "SUCCESS",
+    "detail": "Changed status of profile 'mydethuong' to INACTIVE.",
+    "id": "aud_1789841121025",
+    "timestamp": "2026-09-19T18:05:21.025674+00:00"
+  },
+  {
+    "action": "PROFILE_STATUS_TOGGLE",
+    "target": "User: mydethuong",
+    "operator": "nhfinanceadmin",
+    "status": "SUCCESS",
+    "detail": "Changed status of profile 'mydethuong' to ACTIVE.",
+    "id": "aud_1789841004164",
+    "timestamp": "2026-09-19T18:03:24.164239+00:00"
+  },
+  {
+    "action": "PROFILE_DELETE",
+    "target": "User: test_operator",
+    "operator": "nhfinanceadmin",
+    "status": "SUCCESS",
+    "detail": "Deleted profile credential 'test_operator' (Test Operator).",
+    "id": "aud_1789840911982",
+    "timestamp": "2026-09-19T18:01:51.982910+00:00"
+  },
+  {
+    "action": "PROFILE_STATUS_TOGGLE",
+    "target": "User: test_operator",
+    "operator": "nhfinanceadmin",
+    "status": "SUCCESS",
+    "detail": "Changed status of profile 'test_operator' to INACTIVE.",
+    "id": "aud_1789840911907",
+    "timestamp": "2026-09-19T18:01:51.907222+00:00"
+  },
+  {
+    "action": "PROFILE_CREATE",
+    "target": "User: test_operator (Operator)",
+    "operator": "nhfinanceadmin",
+    "status": "SUCCESS",
+    "detail": "Created profile 'test_operator' with role 'Operator' and 0 permissions.",
+    "id": "aud_1789840911689",
+    "timestamp": "2026-09-19T18:01:51.689964+00:00"
+  },
+  {
+    "action": "PROFILE_STATUS_TOGGLE",
+    "target": "User: mydethuong",
+    "operator": "nhfinanceadmin",
+    "status": "SUCCESS",
+    "detail": "Changed status of profile 'mydethuong' to INACTIVE.",
+    "id": "aud_1789840843253",
+    "timestamp": "2026-09-19T18:00:43.253406+00:00"
+  },
+  {
+    "action": "PROFILE_UPDATE",
+    "target": "User: data_engineer (Data Engineer)",
+    "operator": "nhfinanceadmin",
+    "status": "SUCCESS",
+    "detail": "Updated profile 'data_engineer' (Role: Data Engineer, Status: ACTIVE, Perms: 7).",
+    "id": "aud_1789840501393",
+    "timestamp": "2026-09-19T17:55:01.393527+00:00"
+  },
+  {
+    "action": "PROFILE_UPDATE",
+    "target": "User: nhfinanceadmin (Super Admin)",
+    "operator": "nhfinanceadmin",
+    "status": "SUCCESS",
+    "detail": "Updated profile 'nhfinanceadmin' (Role: Super Admin, Status: ACTIVE, Perms: 8).",
+    "id": "aud_1789840491519",
+    "timestamp": "2026-09-19T17:54:51.519270+00:00"
+  },
+  {
+    "action": "PROFILE_STATUS_TOGGLE",
+    "target": "User: mydethuong",
+    "operator": "nhfinanceadmin",
+    "status": "SUCCESS",
+    "detail": "Changed status of profile 'mydethuong' to ACTIVE.",
+    "id": "aud_1789840313463",
+    "timestamp": "2026-09-19T17:51:53.463810+00:00"
+  },
+  {
+    "action": "PROFILE_STATUS_TOGGLE",
+    "target": "User: mydethuong",
+    "operator": "nhfinanceadmin",
+    "status": "SUCCESS",
+    "detail": "Changed status of profile 'mydethuong' to INACTIVE.",
+    "id": "aud_1789840280199",
+    "timestamp": "2026-09-19T17:51:20.199556+00:00"
+  },
+  {
+    "action": "PROFILE_STATUS_TOGGLE",
+    "target": "User: data_engineer",
+    "operator": "nhfinanceadmin",
+    "status": "SUCCESS",
+    "detail": "Changed status of profile 'data_engineer' to ACTIVE.",
+    "id": "aud_1789840137197",
+    "timestamp": "2026-09-19T17:48:57.197074+00:00"
+  },
+  {
+    "action": "PROFILE_UPDATE",
+    "target": "User: data_engineer (Data Engineer)",
+    "operator": "nhfinanceadmin",
+    "status": "SUCCESS",
+    "detail": "Updated profile 'data_engineer' (Role: Data Engineer, Status: INACTIVE, Perms: 7).",
+    "id": "aud_1789840129554",
+    "timestamp": "2026-09-19T17:48:49.555037+00:00"
+  },
+  {
+    "action": "PROFILE_STATUS_TOGGLE",
+    "target": "User: mydethuong",
+    "operator": "nhfinanceadmin",
+    "status": "SUCCESS",
+    "detail": "Changed status of profile 'mydethuong' to ACTIVE.",
+    "id": "aud_1789840104784",
+    "timestamp": "2026-09-19T17:48:24.784275+00:00"
+  },
+  {
+    "action": "PROFILE_STATUS_TOGGLE",
+    "target": "User: analyst_user",
+    "operator": "nhfinanceadmin",
+    "status": "SUCCESS",
+    "detail": "Changed status of profile 'analyst_user' to INACTIVE.",
+    "id": "aud_1789839026325",
+    "timestamp": "2026-09-19T17:30:26.325695+00:00"
+  },
+  {
+    "action": "PROFILE_STATUS_TOGGLE",
+    "target": "User: mydethuong",
+    "operator": "nhfinanceadmin",
+    "status": "SUCCESS",
+    "detail": "Changed status of profile 'mydethuong' to INACTIVE.",
+    "id": "aud_1789839025558",
+    "timestamp": "2026-09-19T17:30:25.559353+00:00"
+  },
+  {
+    "action": "PROFILE_CREATE",
+    "target": "User: mydethuong (Viewer)",
+    "operator": "nhfinanceadmin",
+    "status": "SUCCESS",
+    "detail": "Created profile 'mydethuong' with role 'Viewer' and 3 permissions.",
+    "id": "aud_1789838279219",
+    "timestamp": "2026-09-19T17:17:59.219720+00:00"
+  },
+  {
+    "operator": "nhfinanceadmin",
+    "action": "RERUN_SLOT",
+    "target_dag": "04_binance_market_metrics_15m_dag",
+    "run_key": "20260919T111500Z",
+    "scope": "BTCUSDT (klines)",
+    "symbols": [
+      "BTCUSDT"
+    ],
+    "products": [
+      "klines"
+    ],
+    "reason": "Manual rerun_slot by nhfinanceadmin: Manual recovery by nhfinanceadmin",
+    "airflow_dispatched": true,
+    "airflow_response": {
+      "success": true,
+      "data": {
+        "conf": {
+          "action": "rerun_slot",
+          "operator": "nhfinanceadmin",
+          "operator_username": "nhfinanceadmin",
+          "products": [
+            "klines"
+          ],
+          "reason": "Manual recovery by nhfinanceadmin",
+          "recollection": true,
+          "run_key": "20260919T111500Z",
+          "symbols": [
+            "BTCUSDT"
+          ],
+          "target_date": "2026-09-19",
+          "target_window": "11:15"
+        },
+        "dag_id": "04_binance_market_metrics_15m_dag",
+        "dag_run_id": "manual__2026-09-19T04:44:38.385880+00:00",
+        "data_interval_end": "2026-09-19T04:30:00+00:00",
+        "data_interval_start": "2026-09-19T04:15:00+00:00",
+        "end_date": null,
+        "execution_date": "2026-09-19T04:44:38.385880+00:00",
+        "external_trigger": true,
+        "last_scheduling_decision": null,
+        "logical_date": "2026-09-19T04:44:38.385880+00:00",
+        "note": null,
+        "run_type": "manual",
+        "start_date": null,
+        "state": "queued"
+      }
+    },
+    "id": "aud_1789793078963",
+    "timestamp": "2026-09-19T04:44:38.963411+00:00"
+  },
+  {
+    "action": "PROFILE_STATUS_TOGGLE",
+    "target": "User: analyst_user",
+    "operator": "analyst_user",
+    "status": "SUCCESS",
+    "detail": "Changed status of profile 'analyst_user' to ACTIVE.",
+    "id": "aud_1789791366816",
+    "timestamp": "2026-09-19T04:16:06.816165+00:00"
+  },
+  {
+    "action": "PROFILE_STATUS_TOGGLE",
+    "target": "User: analyst_user",
+    "operator": "analyst_user",
+    "status": "SUCCESS",
+    "detail": "Changed status of profile 'analyst_user' to INACTIVE.",
+    "id": "aud_1789791365979",
+    "timestamp": "2026-09-19T04:16:05.979137+00:00"
+  },
+  {
+    "action": "PROFILE_STATUS_TOGGLE",
+    "target": "User: airflow_service",
+    "operator": "nhfinanceadmin",
+    "status": "SUCCESS",
+    "detail": "Changed status of profile 'airflow_service' to INACTIVE.",
+    "id": "aud_1789791331687",
+    "timestamp": "2026-09-19T04:15:31.687576+00:00"
+  },
+  {
+    "action": "PROFILE_STATUS_TOGGLE",
+    "target": "User: data_engineer",
+    "operator": "nhfinanceadmin",
+    "status": "SUCCESS",
+    "detail": "Changed status of profile 'data_engineer' to INACTIVE.",
+    "id": "aud_1789791330428",
+    "timestamp": "2026-09-19T04:15:30.428983+00:00"
+  },
+  {
+    "action": "PROFILE_UPDATE",
+    "target": "User: analyst_user (Viewer)",
+    "operator": "nhfinanceadmin",
+    "status": "SUCCESS",
+    "detail": "Updated profile 'analyst_user' (Role: Viewer, Status: ACTIVE, Perms: 3).",
+    "id": "aud_1789791321405",
+    "timestamp": "2026-09-19T04:15:21.405460+00:00"
+  },
+  {
+    "action": "PROFILE_UPDATE",
+    "target": "User: airflow_service (Service Account)",
+    "operator": "nhfinanceadmin",
+    "status": "SUCCESS",
+    "detail": "Updated profile 'airflow_service' (Role: Service Account, Status: ACTIVE, Perms: 4).",
+    "id": "aud_1789791280290",
+    "timestamp": "2026-09-19T04:14:40.290502+00:00"
+  },
+  {
+    "action": "PROFILE_UPDATE",
+    "target": "User: data_engineer (Data Engineer)",
+    "operator": "nhfinanceadmin",
+    "status": "SUCCESS",
+    "detail": "Updated profile 'data_engineer' (Role: Data Engineer, Status: ACTIVE, Perms: 7).",
+    "id": "aud_1789791244959",
+    "timestamp": "2026-09-19T04:14:04.959669+00:00"
+  },
+  {
+    "action": "PROFILE_DELETE",
+    "target": "User: test_trader_01",
+    "operator": "nhfinanceadmin",
+    "status": "SUCCESS",
+    "detail": "Deleted profile credential 'test_trader_01' (Test Quantitative Trader).",
+    "id": "aud_1789791032174",
+    "timestamp": "2026-09-19T04:10:32.174342+00:00"
+  },
+  {
+    "action": "PROFILE_STATUS_TOGGLE",
+    "target": "User: test_trader_01",
+    "operator": "nhfinanceadmin",
+    "status": "SUCCESS",
+    "detail": "Changed status of profile 'test_trader_01' to INACTIVE.",
+    "id": "aud_1789791032121",
+    "timestamp": "2026-09-19T04:10:32.121553+00:00"
+  },
+  {
+    "action": "PROFILE_UPDATE",
+    "target": "User: test_trader_01 (Data Engineer)",
+    "operator": "nhfinanceadmin",
+    "status": "SUCCESS",
+    "detail": "Updated profile 'test_trader_01' (Role: Data Engineer, Status: ACTIVE, Perms: 4).",
+    "id": "aud_1789791032079",
+    "timestamp": "2026-09-19T04:10:32.079717+00:00"
+  },
+  {
+    "action": "PROFILE_CREATE",
+    "target": "User: test_trader_01 (Operator)",
+    "operator": "nhfinanceadmin",
+    "status": "SUCCESS",
+    "detail": "Created profile 'test_trader_01' with role 'Operator' and 3 permissions.",
+    "id": "aud_1789791031942",
+    "timestamp": "2026-09-19T04:10:31.942877+00:00"
+  },
+  {
+    "operator": "nhfinanceadmin",
+    "action": "SCHEDULE_ACTIVATE",
+    "target_schedules": [
+      "SCH_DELLBUSDT_DEPTH_API"
+    ],
+    "active": true,
+    "reason": "Manual batch SCHEDULE_ACTIVATE: 1 schedules - Operator manual Activate from Collect Schedules table",
+    "count": 1,
+    "id": "aud_1789789953101",
+    "timestamp": "2026-09-19T03:52:33.101899+00:00"
+  },
+  {
+    "operator": "nhfinanceadmin",
+    "action": "SCHEDULE_DEACTIVATE",
+    "target_schedules": [
+      "SCH_DELLBUSDT_DEPTH_API"
+    ],
+    "active": false,
+    "reason": "Manual batch SCHEDULE_DEACTIVATE: 1 schedules - Operator manual Deactivate from Collect Schedules table",
+    "count": 1,
+    "id": "aud_1789789950089",
+    "timestamp": "2026-09-19T03:52:30.089782+00:00"
+  },
+  {
+    "operator": "nhfinanceadmin",
+    "action": "SCHEDULE_DEACTIVATE",
+    "target_schedules": [
+      "SCH_DELLBUSDT_LIQUIDATIONS_API"
+    ],
+    "active": false,
+    "reason": "Manual batch SCHEDULE_DEACTIVATE: 1 schedules - Operator manual Deactivate from Collect Schedules table",
+    "count": 1,
+    "id": "aud_1789789943903",
+    "timestamp": "2026-09-19T03:52:23.903321+00:00"
+  },
+  {
+    "operator": "nhfinanceadmin",
+    "action": "SCHEDULE_ACTIVATE",
+    "target_schedules": [
+      "SCH_DELLBUSDT_LIQUIDATIONS_API"
+    ],
+    "active": true,
+    "reason": "Manual batch SCHEDULE_ACTIVATE: 1 schedules - Operator manual Activate from Collect Schedules table",
+    "count": 1,
+    "id": "aud_1789789940497",
+    "timestamp": "2026-09-19T03:52:20.497478+00:00"
+  },
+  {
+    "operator": "nhfinanceadmin",
+    "action": "BATCH_DELETE_TRADING_PAIRS",
+    "target_table": "default.dim_trading_pairs",
+    "pair_ids": [
+      7,
+      8
+    ],
+    "count": 2,
+    "reason": "Batch deletion of 2 trading pairs by nhfinanceadmin",
+    "clickhouse_synced": true,
+    "id": "aud_1789788578737",
+    "timestamp": "2026-09-19T03:29:38.737841+00:00"
+  },
+  {
+    "operator": "nhfinanceadmin",
+    "action": "ADD_TRADING_PAIR",
+    "target_table": "default.dim_trading_pairs",
+    "pair_id": 8,
+    "symbol": "AVAXUSDT",
+    "trading_pair": "AVAX/USDT",
+    "reason": "Manual creation of trading pair AVAXUSDT (AVAX/USDT) by nhfinanceadmin",
+    "clickhouse_synced": true,
+    "id": "aud_1789788578666",
+    "timestamp": "2026-09-19T03:29:38.666301+00:00"
+  },
+  {
+    "operator": "nhfinanceadmin",
+    "action": "ADD_TRADING_PAIR",
+    "target_table": "default.dim_trading_pairs",
+    "pair_id": 7,
+    "symbol": "SOLUSDT",
+    "trading_pair": "SOL/USDT",
+    "reason": "Manual creation of trading pair SOLUSDT (SOL/USDT) by nhfinanceadmin",
+    "clickhouse_synced": true,
+    "id": "aud_1789788558650",
+    "timestamp": "2026-09-19T03:29:18.650581+00:00"
+  },
+  {
+    "operator": "nhfinanceadmin",
+    "action": "DELETE_TRADING_PAIR",
+    "target_table": "default.dim_trading_pairs",
+    "pair_id": 7,
+    "symbol": "SOLUSDT",
+    "reason": "Manual deletion of trading pair SOLUSDT (ID: 7) by nhfinanceadmin",
+    "clickhouse_synced": true,
+    "id": "aud_1789788538549",
+    "timestamp": "2026-09-19T03:28:58.549397+00:00"
+  },
+  {
+    "operator": "nhfinanceadmin",
+    "action": "TOGGLE_TRADING_PAIR_ACTIVE",
+    "target_table": "default.dim_trading_pairs",
+    "pair_id": 7,
+    "symbol": "SOLUSDT",
+    "is_active": 1,
+    "reason": "Manual active toggle for SOLUSDT: Active",
+    "id": "aud_1789788354603",
+    "timestamp": "2026-09-19T03:25:54.603873+00:00"
+  },
+  {
+    "operator": "nhfinanceadmin",
+    "action": "TOGGLE_TRADING_PAIR_ACTIVE",
+    "target_table": "default.dim_trading_pairs",
+    "pair_id": 7,
+    "symbol": "SOLUSDT",
+    "is_active": 0,
+    "reason": "Manual active toggle for SOLUSDT: Inactive",
+    "id": "aud_1789788313523",
+    "timestamp": "2026-09-19T03:25:13.523368+00:00"
+  },
+  {
+    "operator": "nhfinanceadmin",
+    "action": "ADD_TRADING_PAIR",
+    "target_table": "default.dim_trading_pairs",
+    "pair_id": 7,
+    "symbol": "SOLUSDT",
+    "trading_pair": "SOL/USDT",
+    "reason": "Manual creation of trading pair SOLUSDT (SOL/USDT) by nhfinanceadmin",
+    "clickhouse_synced": true,
+    "id": "aud_1789788284503",
+    "timestamp": "2026-09-19T03:24:44.503377+00:00"
+  },
+  {
+    "operator": "nhfinanceadmin",
+    "action": "SCHEDULE_ACTIVATE",
+    "target_schedules": [
+      "SCH_BTCUSDT_KLINES_WSIS"
+    ],
+    "active": true,
+    "reason": "Manual SCHEDULE_ACTIVATE for SCH_BTCUSDT_KLINES_WSIS",
+    "id": "aud_1789759499589",
+    "timestamp": "2026-09-18T19:24:59.589475+00:00"
+  },
+  {
+    "operator": "nhfinanceadmin",
+    "action": "SCHEDULE_DEACTIVATE",
+    "target_schedules": [
+      "SCH_BTCUSDT_KLINES_WSIS"
+    ],
+    "active": false,
+    "reason": "Manual SCHEDULE_DEACTIVATE for SCH_BTCUSDT_KLINES_WSIS",
+    "id": "aud_1789759498959",
+    "timestamp": "2026-09-18T19:24:58.959818+00:00"
+  },
+  {
+    "operator": "nhfinanceadmin",
+    "action": "SCHEDULE_ACTIVATE",
+    "target_schedules": [
+      "SCH_BTCUSDT_AGGTRADE"
+    ],
+    "active": true,
+    "reason": "Manual SCHEDULE_ACTIVATE for SCH_BTCUSDT_AGGTRADE",
+    "id": "aud_1789759157505",
+    "timestamp": "2026-09-18T19:19:17.505209+00:00"
+  },
+  {
+    "operator": "nhfinanceadmin",
+    "action": "SCHEDULE_DEACTIVATE",
+    "target_schedules": [
+      "SCH_BTCUSDT_AGGTRADE"
+    ],
+    "active": false,
+    "reason": "Manual SCHEDULE_DEACTIVATE for SCH_BTCUSDT_AGGTRADE",
+    "id": "aud_1789759157243",
+    "timestamp": "2026-09-18T19:19:17.243353+00:00"
+  },
+  {
+    "operator": "nhfinanceadmin",
+    "action": "SCHEDULE_ACTIVATE",
+    "target_schedules": [
+      "SCH_BTCUSDT_KLINES"
+    ],
+    "active": true,
+    "reason": "Manual batch SCHEDULE_ACTIVATE: 1 schedules - Test reactivation",
+    "count": 1,
+    "id": "aud_1789759150638",
+    "timestamp": "2026-09-18T19:19:10.638466+00:00"
+  },
+  {
+    "operator": "nhfinanceadmin",
+    "action": "SCHEDULE_DEACTIVATE",
+    "target_schedules": [
+      "SCH_BTCUSDT_KLINES"
+    ],
+    "active": false,
+    "reason": "Manual batch SCHEDULE_DEACTIVATE: 1 schedules - Test deactivation",
+    "count": 1,
+    "id": "aud_1789759150347",
+    "timestamp": "2026-09-18T19:19:10.347621+00:00"
+  },
+  {
+    "operator": "nhfinanceadmin",
+    "action": "BATCH_RERUN_SCHEDULES",
+    "target_dag": "04_binance_market_metrics_15m_dag",
+    "run_key": "20260919T014300Z",
+    "symbols": [
+      "ETHUSDT",
+      "BTCUSDT"
+    ],
+    "products": [
+      "klines",
+      "aggtrade"
+    ],
+    "reason": "Batch Rerun (2 schedules) - Batch rerun verification",
+    "airflow_dispatched": true,
+    "airflow_response": {
+      "success": true,
+      "data": {
+        "conf": {
+          "action": "batch_rerun_schedules",
+          "operator": "nhfinanceadmin",
+          "products": [
+            "klines",
+            "aggtrade"
+          ],
+          "reason": "Batch rerun verification",
+          "recollection": true,
+          "run_key": "20260919T014300Z",
+          "schedule_ids": [
+            "SCH_BTCUSDT_KLINES",
+            "SCH_ETHUSDT_AGGTRADE"
+          ],
+          "symbols": [
+            "ETHUSDT",
+            "BTCUSDT"
+          ],
+          "target_date": "2026-09-19",
+          "target_window": "01:43"
+        },
+        "dag_id": "04_binance_market_metrics_15m_dag",
+        "dag_run_id": "manual__2026-09-18T18:43:11.504906+00:00",
+        "data_interval_end": "2026-09-18T18:30:00+00:00",
+        "data_interval_start": "2026-09-18T18:15:00+00:00",
+        "end_date": null,
+        "execution_date": "2026-09-18T18:43:11.504906+00:00",
+        "external_trigger": true,
+        "last_scheduling_decision": null,
+        "logical_date": "2026-09-18T18:43:11.504906+00:00",
+        "note": null,
+        "run_type": "manual",
+        "start_date": null,
+        "state": "queued"
+      }
+    },
+    "id": "aud_1789756991795",
+    "timestamp": "2026-09-18T18:43:11.795874+00:00"
+  },
+  {
+    "operator": "nhfinanceadmin",
+    "action": "RERUN_SCHEDULE_TRACE",
+    "target_dag": "04_binance_market_metrics_15m_dag",
+    "run_key": "20260919T014200Z",
+    "symbols": [
+      "BTCUSDT"
+    ],
+    "products": [
+      "klines"
+    ],
+    "reason": "Schedule Trace Trigger: SCH_BTCUSDT_KLINES - Verification trace test",
+    "airflow_dispatched": true,
+    "airflow_response": {
+      "success": true,
+      "data": {
+        "conf": {
+          "action": "rerun_slot",
+          "operator": "nhfinanceadmin",
+          "products": [
+            "klines"
+          ],
+          "reason": "Verification trace test",
+          "recollection": true,
+          "run_key": "20260919T014200Z",
+          "schedule_id": "SCH_BTCUSDT_KLINES",
+          "symbols": [
+            "BTCUSDT"
+          ],
+          "target_date": "2026-09-19",
+          "target_window": "01:42"
+        },
+        "dag_id": "04_binance_market_metrics_15m_dag",
+        "dag_run_id": "manual__2026-09-18T18:42:57.599223+00:00",
+        "data_interval_end": "2026-09-18T18:30:00+00:00",
+        "data_interval_start": "2026-09-18T18:15:00+00:00",
+        "end_date": null,
+        "execution_date": "2026-09-18T18:42:57.599223+00:00",
+        "external_trigger": true,
+        "last_scheduling_decision": null,
+        "logical_date": "2026-09-18T18:42:57.599223+00:00",
+        "note": null,
+        "run_type": "manual",
+        "start_date": null,
+        "state": "queued"
+      }
+    },
+    "id": "aud_1789756977880",
+    "timestamp": "2026-09-18T18:42:57.880561+00:00"
+  },
+  {
+    "operator": "nhfinanceadmin",
+    "action": "RERUN_SLOT",
+    "target_dag": "04_binance_market_metrics_15m_dag",
+    "run_key": "20260919T003000Z",
+    "symbols": [
+      "BTCUSDT"
+    ],
+    "products": [
+      "klines"
+    ],
+    "reason": "Operator manual data recovery",
+    "airflow_dispatched": true,
+    "airflow_response": {
+      "success": true,
+      "data": {
+        "conf": {
+          "action": "rerun_slot",
+          "operator": "nhfinanceadmin",
+          "products": [
+            "klines"
+          ],
+          "reason": "Operator manual data recovery",
+          "recollection": true,
+          "run_key": "20260919T003000Z",
+          "symbols": [
+            "BTCUSDT"
+          ],
+          "target_date": "2026-09-19",
+          "target_window": "00:30"
+        },
+        "dag_id": "04_binance_market_metrics_15m_dag",
+        "dag_run_id": "manual__2026-09-18T18:26:30.755389+00:00",
+        "data_interval_end": "2026-09-18T18:15:00+00:00",
+        "data_interval_start": "2026-09-18T18:00:00+00:00",
+        "end_date": null,
+        "execution_date": "2026-09-18T18:26:30.755389+00:00",
+        "external_trigger": true,
+        "last_scheduling_decision": null,
+        "logical_date": "2026-09-18T18:26:30.755389+00:00",
+        "note": null,
+        "run_type": "manual",
+        "start_date": null,
+        "state": "queued"
+      }
+    },
+    "id": "aud_1789755991637",
+    "timestamp": "2026-09-18T18:26:31.637690+00:00"
+  },
+  {
+    "operator": "nhfinanceadmin",
+    "action": "RERUN_SLOT",
+    "target_dag": "04_binance_market_metrics_15m_dag",
+    "run_key": "20260918T103000Z",
+    "symbols": [
+      "BTCUSDT",
+      "ETHUSDT"
+    ],
+    "products": [
+      "klines",
+      "aggtrade"
+    ],
+    "reason": "Verification of date picker fix",
+    "airflow_dispatched": true,
+    "airflow_response": {
+      "success": true,
+      "data": {
+        "conf": {
+          "action": "rerun_slot",
+          "operator": "nhfinanceadmin",
+          "products": [
+            "klines",
+            "aggtrade"
+          ],
+          "reason": "Verification of date picker fix",
+          "recollection": true,
+          "run_key": "20260918T103000Z",
+          "symbols": [
+            "BTCUSDT",
+            "ETHUSDT"
+          ],
+          "target_date": "2026-09-18",
+          "target_window": "10:30"
+        },
+        "dag_id": "04_binance_market_metrics_15m_dag",
+        "dag_run_id": "manual__2026-09-18T18:20:32.071272+00:00",
+        "data_interval_end": "2026-09-18T18:15:00+00:00",
+        "data_interval_start": "2026-09-18T18:00:00+00:00",
+        "end_date": null,
+        "execution_date": "2026-09-18T18:20:32.071272+00:00",
+        "external_trigger": true,
+        "last_scheduling_decision": null,
+        "logical_date": "2026-09-18T18:20:32.071272+00:00",
+        "note": null,
+        "run_type": "manual",
+        "start_date": null,
+        "state": "queued"
+      }
+    },
+    "id": "aud_1789755632504",
+    "timestamp": "2026-09-18T18:20:32.504224+00:00"
+  },
+  {
+    "operator": "nhfinanceadmin",
+    "action": "RERUN_SLOT",
+    "target_dag": "04_binance_market_metrics_15m_dag",
+    "run_key": "20260918T141500Z",
+    "symbols": [
+      "BTCUSDT",
+      "ETHUSDT"
+    ],
+    "products": [
+      "aggtrade",
+      "klines"
+    ],
+    "reason": "Test selective rerun",
+    "airflow_dispatched": true,
+    "airflow_response": {
+      "success": true,
+      "data": {
+        "conf": {
+          "action": "rerun_slot",
+          "operator": "nhfinanceadmin",
+          "products": [
+            "aggtrade",
+            "klines"
+          ],
+          "reason": "Test selective rerun",
+          "recollection": true,
+          "run_key": "20260918T141500Z",
+          "symbols": [
+            "BTCUSDT",
+            "ETHUSDT"
+          ],
+          "target_date": "2026-09-18",
+          "target_window": "14:15"
+        },
+        "dag_id": "04_binance_market_metrics_15m_dag",
+        "dag_run_id": "manual__2026-09-18T17:56:42.448219+00:00",
+        "data_interval_end": "2026-09-18T17:45:00+00:00",
+        "data_interval_start": "2026-09-18T17:30:00+00:00",
+        "end_date": null,
+        "execution_date": "2026-09-18T17:56:42.448219+00:00",
+        "external_trigger": true,
+        "last_scheduling_decision": null,
+        "logical_date": "2026-09-18T17:56:42.448219+00:00",
+        "note": null,
+        "run_type": "manual",
+        "start_date": null,
+        "state": "queued"
+      }
+    },
+    "id": "aud_1789754202700",
+    "timestamp": "2026-09-18T17:56:42.700107+00:00"
+  }
+]

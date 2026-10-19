@@ -1,0 +1,100 @@
+[
+  {
+    "id": "role-super-admin",
+    "name": "Super Admin",
+    "description": "Full Root Privilege & Infrastructure Control across all systems",
+    "badge_class": "bg-purple-500/10 text-purple-600 dark:text-purple-400 border-purple-500/30",
+    "icon": "fa-shield-halved text-purple-500",
+    "default_permissions": [
+      "view_matrix",
+      "trigger_pipeline",
+      "manage_trading_pairs",
+      "manage_catalog",
+      "manage_profiles",
+      "view_lakehouse",
+      "manage_stream",
+      "view_audit",
+      "view_system_links",
+      "view_raw_urls",
+      "view_db_architecture",
+      "export_lakehouse_data",
+      "manage_system_alerts",
+      "inspect_reconciliation_details",
+      "view_ai_models",
+      "trigger_ai_inference",
+      "manage_ai_governance"
+    ],
+    "is_system": true
+  },
+  {
+    "id": "role-data-ai-engineer",
+    "name": "Data & AI Engineer",
+    "description": "ETL Pipelines, Schemas, Lakehouse Sync, AI Model Inference & MLOps Governance",
+    "badge_class": "bg-blue-500/10 text-blue-600 dark:text-blue-400 border-blue-500/30",
+    "icon": "fa-database text-blue-500",
+    "default_permissions": [
+      "view_matrix",
+      "trigger_pipeline",
+      "manage_trading_pairs",
+      "manage_catalog",
+      "view_lakehouse",
+      "manage_stream",
+      "view_audit",
+      "view_system_links",
+      "view_raw_urls",
+      "view_db_architecture",
+      "export_lakehouse_data",
+      "manage_system_alerts",
+      "inspect_reconciliation_details",
+      "view_ai_models",
+      "trigger_ai_inference",
+      "manage_ai_governance"
+    ],
+    "is_system": true
+  },
+  {
+    "id": "role-operator",
+    "name": "Operator",
+    "description": "Operational Pipeline Monitoring, Service Health, Stream Control & Online Inference",
+    "badge_class": "bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border-emerald-500/30",
+    "icon": "fa-bolt text-emerald-500",
+    "default_permissions": [
+      "view_matrix",
+      "trigger_pipeline",
+      "view_lakehouse",
+      "manage_stream",
+      "manage_system_alerts",
+      "inspect_reconciliation_details",
+      "view_ai_models",
+      "trigger_ai_inference"
+    ],
+    "is_system": true
+  },
+  {
+    "id": "role-viewer",
+    "name": "Viewer",
+    "description": "Read-Only Business Analytics, Pipeline Monitoring & Model Forecasts",
+    "badge_class": "bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 border-cyan-500/30",
+    "icon": "fa-eye text-cyan-500",
+    "default_permissions": [
+      "view_matrix",
+      "view_lakehouse",
+      "view_ai_models"
+    ],
+    "is_system": true
+  },
+  {
+    "id": "role-service-account",
+    "name": "Service Account",
+    "description": "Headless Automation Token for Automated Triggers & Cron Probes",
+    "badge_class": "bg-amber-500/10 text-amber-600 dark:text-amber-400 border-amber-500/30",
+    "icon": "fa-robot text-amber-500",
+    "default_permissions": [
+      "view_matrix",
+      "trigger_pipeline",
+      "view_lakehouse",
+      "trigger_ai_inference"
+    ],
+    "is_system": true
+  }
+]

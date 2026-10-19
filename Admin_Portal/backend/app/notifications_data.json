@@ -1,0 +1,90 @@
+[
+  {
+    "id": "notif-wsis-overall",
+    "severity": "OPTIMAL",
+    "zone": "95% - 105% (Optimal Green)",
+    "metric": "System Overall Match Rate",
+    "title": "System overall reconciliation achieved optimal 99.92%",
+    "message": "All ingestion streams (Klines, AggTrades, Depth 20, Liquidations) fully match Airflow REST batch within the 95% - 105% safe threshold.",
+    "timestamp": "2026-10-02 17:34:22",
+    "read": true,
+    "action_url": "wsis"
+  },
+  {
+    "id": "notif-wsis-klines",
+    "severity": "OPTIMAL",
+    "zone": "95% - 105% (Optimal Green)",
+    "metric": "Spot Klines (1m/15m)",
+    "title": "Spot Klines (1m/15m) accuracy synchronized at 99.93%",
+    "message": "Cross-audit between WebSocket WSIS and Airflow REST batch verified (OHLCV variance <= 1e-8). Safe Green Zone achieved.",
+    "timestamp": "2026-10-02 17:34:22",
+    "read": true,
+    "action_url": "wsis"
+  },
+  {
+    "id": "notif-wsis-aggtrade",
+    "severity": "OPTIMAL",
+    "zone": "95% - 105% (Optimal Green)",
+    "metric": "Spot AggTrades (Ticks)",
+    "title": "Spot AggTrades (Ticks) accuracy synchronized at 99.8%",
+    "message": "Cross-audit between WebSocket WSIS and Airflow REST batch verified (Missing tick detection = 0). Safe Green Zone achieved.",
+    "timestamp": "2026-10-02 17:34:22",
+    "read": true,
+    "action_url": "wsis"
+  },
+  {
+    "id": "notif-wsis-depth",
+    "severity": "OPTIMAL",
+    "zone": "95% - 105% (Optimal Green)",
+    "metric": "Futures Depth 20 (Order Book)",
+    "title": "Futures Depth 20 (Order Book) accuracy synchronized at 99.88%",
+    "message": "Cross-audit between WebSocket WSIS and Airflow REST batch verified (Book imbalance delta < 0.05%). Safe Green Zone achieved.",
+    "timestamp": "2026-10-02 17:34:22",
+    "read": true,
+    "action_url": "wsis"
+  },
+  {
+    "id": "notif-wsis-liquidations",
+    "severity": "OPTIMAL",
+    "zone": "95% - 105% (Optimal Green)",
+    "metric": "Futures Force Orders (Liquidations)",
+    "title": "Futures Force Orders (Liquidations) accuracy synchronized at 99.75%",
+    "message": "Cross-audit between WebSocket WSIS and Airflow REST batch verified (Force order ID verification). Safe Green Zone achieved.",
+    "timestamp": "2026-10-02 17:34:22",
+    "read": true,
+    "action_url": "wsis"
+  },
+  {
+    "id": "notif-wsis-sealed-window",
+    "severity": "OPTIMAL",
+    "zone": "95% - 105% (Optimal Green)",
+    "metric": "15M Tumbling Window Sync",
+    "title": "WSIS Daemon Sealed 15M Window and Flushed to S3",
+    "message": "Tumbling window (00:30 - 00:45 GMT+7) for all 6 trading pairs sealed and archived to s3://crypto-bronze/wsis/ with complete checksum verification.",
+    "timestamp": "2026-10-02 17:34:22",
+    "read": true,
+    "action_url": "wsis"
+  },
+  {
+    "id": "notif-ai-models-active",
+    "severity": "OPTIMAL",
+    "zone": "SYS-04 Production Ready",
+    "metric": "AI Models & Governance",
+    "title": "SYS-04: 3 AI Models Operational (LSTM, Isolation Forest, LightGBM)",
+    "message": "All 3 models running under strict governance (Advisory Mode, Zero-Account-Ban, 3-Tier Gate). Directional accuracy up to 54.65%, ROC-AUC 0.9181.",
+    "timestamp": "2026-10-02 17:34:22",
+    "read": true,
+    "action_url": "ai-models"
+  },
+  {
+    "id": "notif-ai-hourly-dag",
+    "severity": "OPTIMAL",
+    "zone": "Hourly Auto-Run (Airflow)",
+    "metric": "Continuous 1h Drift Reconciliation",
+    "title": "DAG 05 (05_ai_models_hourly_inference_dag) Scheduled at 0 * * * *",
+    "message": "Automated 1-hour cycle executes price forecasts, microstructure risk guard checks, and logs 1-hour prior prediction reconciliation to ClickHouse Gold.",
+    "timestamp": "2026-10-02 17:34:22",
+    "read": true,
+    "action_url": "ai-models"
+  }
+]

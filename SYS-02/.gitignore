@@ -1,0 +1,26 @@
+# Local development only
+venv/
+.venv/
+env/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Airflow runtime logs and sqlite/cfg
+logs/
+*.log
+airflow.cfg
+airflow.db
+webserver_config.py
+unittests.cfg
+
+# IDE and OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

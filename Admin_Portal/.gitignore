@@ -1,0 +1,35 @@
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+backend/.env
+backend/.env.*
+!backend/.env.example
+
+# Python runtime artifacts and environments
+venv/
+.venv/
+env/
+__pycache__/
+*.py[cod]
+*$py.class
+backend/app/__pycache__/
+.pytest_cache/
+
+# Node.js and frontend builds (if applicable)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+dist/
+build/
+
+# Runtime logs
+logs/
+*.log
+
+# IDE and OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

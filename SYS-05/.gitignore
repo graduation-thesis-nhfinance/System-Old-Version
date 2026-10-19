@@ -1,0 +1,28 @@
+# Credentials and environment configuration
+.env
+.env.*
+!.env.example
+
+# Python runtime artifacts and environments
+venv/
+.venv/
+env/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Runtime logs
+logs/
+*.log
+
+# Docker bind-mounted runtime state and persistent database volumes
+data/
+data/clickhouse/
+data/postgres/
+data/minio/
+
+# IDE and OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

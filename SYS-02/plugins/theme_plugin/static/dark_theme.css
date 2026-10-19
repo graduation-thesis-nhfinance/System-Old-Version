@@ -1,0 +1,1059 @@
+/* ==========================================================================
+   AIRFLOW ULTRA-DEEP SLATE THEME (100% FULL-SURFACE COVERAGE)
+   Matching Modern Airflow 3.0 & Enterprise Production Standards
+   Applies across ALL views:
+   - Home Page (DAGs List & Filters)
+   - Grid View (React SPA & Chakra UI)
+   - Graph View (SVG DAG Pipeline Canvas)
+   - Logs Console (Deep Black Monospace Terminal)
+   - Gantt, Calendar, Task Duration, Code, Datasets, Security, Admin
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   0. NEUTRALIZE AIRFLOW 2.10 NATIVE INVERT FILTER
+   -------------------------------------------------------------------------- */
+html[data-color-scheme="dark"],
+html.airflow-dark-theme[data-color-scheme="dark"] {
+  filter: none !important;
+}
+
+/* --------------------------------------------------------------------------
+   1. CHAKRA UI CSS VARIABLES OVERRIDE (React SPA Engine)
+   -------------------------------------------------------------------------- */
+:root[data-color-scheme="dark"],
+html.airflow-dark-theme,
+body.airflow-dark-theme {
+  --chakra-colors-chakra-body-bg: #0b0f19 !important;
+  --chakra-colors-chakra-body-text: #cbd5e1 !important;
+  --chakra-colors-chakra-border-color: #1e293b !important;
+  --chakra-colors-chakra-subtle-bg: #0f172a !important;
+  --chakra-colors-chakra-placeholder-color: #64748b !important;
+  --chakra-colors-white: #0b0f19 !important;
+  --chakra-colors-gray-50: #0f172a !important;
+  --chakra-colors-gray-100: #131c31 !important;
+  --chakra-colors-gray-200: #1e293b !important;
+  --chakra-colors-gray-300: #334155 !important;
+  --chakra-colors-gray-400: #475569 !important;
+  --chakra-colors-gray-500: #64748b !important;
+  --chakra-colors-gray-600: #94a3b8 !important;
+  --chakra-colors-gray-700: #cbd5e1 !important;
+  --chakra-colors-gray-800: #e2e8f0 !important;
+  --chakra-colors-gray-900: #f8fafc !important;
+  --chakra-colors-blue-50: #0c1a30 !important;
+  --chakra-colors-blue-100: #172554 !important;
+  --chakra-colors-blue-200: #1e3a8a !important;
+  --chakra-colors-blue-500: #38bdf8 !important;
+  --chakra-colors-blue-600: #0284c7 !important;
+}
+
+/* --------------------------------------------------------------------------
+   2. GLOBAL BODY, CANVAS & WRAPPERS
+   -------------------------------------------------------------------------- */
+html.airflow-dark-theme,
+body.airflow-dark-theme,
+body.airflow-dark-theme #main-content,
+body.airflow-dark-theme .body,
+body.airflow-dark-theme main,
+body.airflow-dark-theme #root,
+body.airflow-dark-theme #react-container {
+  background-color: #0b0f19 !important;
+  color: #cbd5e1 !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
+}
+
+/* --------------------------------------------------------------------------
+   3. TOP NAVIGATION BAR (Enterprise Slate Header)
+   -------------------------------------------------------------------------- */
+body.airflow-dark-theme .navbar,
+body.airflow-dark-theme .navbar-default,
+body.airflow-dark-theme nav.navbar,
+body.airflow-dark-theme header {
+  background-color: #0b0f19 !important;
+  border-bottom: 1px solid #1e293b !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5) !important;
+}
+
+body.airflow-dark-theme .navbar .navbar-brand,
+body.airflow-dark-theme .navbar-nav > li > a {
+  color: #f1f5f9 !important;
+  font-weight: 500 !important;
+  transition: all 0.2s ease;
+}
+
+body.airflow-dark-theme .navbar-nav > li > a:hover,
+body.airflow-dark-theme .navbar-nav > li > a:focus,
+body.airflow-dark-theme .navbar-nav > .active > a {
+  color: #38bdf8 !important;
+  background-color: #1e293b !important;
+  border-radius: 6px;
+}
+
+/* --------------------------------------------------------------------------
+   4. DAG HEADER & SUB-NAVIGATION TABS (Grid, Graph, Gantt, Details, etc.)
+   -------------------------------------------------------------------------- */
+body.airflow-dark-theme .subnav,
+body.airflow-dark-theme .dag-info,
+body.airflow-dark-theme div[style*="border-bottom"] {
+  background-color: #0b0f19 !important;
+  border-color: #1e293b !important;
+}
+
+body.airflow-dark-theme h2,
+body.airflow-dark-theme h3,
+body.airflow-dark-theme h4,
+body.airflow-dark-theme h5 {
+  color: #f8fafc !important;
+}
+
+body.airflow-dark-theme .text-muted {
+  color: #94a3b8 !important;
+}
+
+/* Sub-nav tabs strip */
+body.airflow-dark-theme .nav-tabs {
+  border-bottom: 1px solid #1e293b !important;
+  background-color: transparent !important;
+}
+
+body.airflow-dark-theme .nav-tabs > li > a {
+  color: #94a3b8 !important;
+  border: 1px solid transparent !important;
+  background-color: transparent !important;
+  font-weight: 500 !important;
+  transition: all 0.15s ease;
+}
+
+body.airflow-dark-theme .nav-tabs > li > a:hover {
+  color: #38bdf8 !important;
+  background-color: #1e293b !important;
+  border-radius: 6px 6px 0 0;
+}
+
+body.airflow-dark-theme .nav-tabs > li.active > a,
+body.airflow-dark-theme .nav-tabs > li.active > a:hover,
+body.airflow-dark-theme .nav-tabs > li.active > a:focus {
+  color: #38bdf8 !important;
+  background-color: #0f172a !important;
+  border: 1px solid #1e293b !important;
+  border-bottom-color: #0f172a !important;
+  font-weight: 600 !important;
+}
+
+/* --------------------------------------------------------------------------
+   5. GRID VIEW REACT SPA (Chakra UI Surface Neutralization)
+   -------------------------------------------------------------------------- */
+/* Main Grid Flex & Box Containers */
+body.airflow-dark-theme #react-container > div,
+body.airflow-dark-theme #react-container div[style*="background"],
+body.airflow-dark-theme #react-container [class*="chakra-stack"],
+body.airflow-dark-theme #react-container [class*="chakra-box"],
+body.airflow-dark-theme #react-container [class*="chakra-flex"],
+body.airflow-dark-theme .chakra-portal div {
+  color: #cbd5e1 !important;
+}
+
+/* Force dark surface on panels */
+body.airflow-dark-theme #react-container div {
+  border-color: #1e293b;
+}
+
+/* Filter Bar at top of Grid View */
+body.airflow-dark-theme #react-container [data-testid="filter-bar"],
+body.airflow-dark-theme #react-container form,
+body.airflow-dark-theme #react-container [role="search"] {
+  background-color: #0f172a !important;
+  border: 1px solid #1e293b !important;
+  border-radius: 8px !important;
+}
+
+/* Chakra UI Inputs & Selects */
+body.airflow-dark-theme .chakra-input,
+body.airflow-dark-theme .chakra-select,
+body.airflow-dark-theme .chakra-select__wrapper select {
+  background-color: #131c31 !important;
+  border: 1px solid #334155 !important;
+  color: #f8fafc !important;
+  border-radius: 6px !important;
+}
+
+body.airflow-dark-theme .chakra-input:focus,
+body.airflow-dark-theme .chakra-select:focus {
+  border-color: #38bdf8 !important;
+  box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.25) !important;
+}
+
+/* Chakra Buttons */
+body.airflow-dark-theme .chakra-button {
+  background-color: #1e293b !important;
+  border: 1px solid #334155 !important;
+  color: #f1f5f9 !important;
+  border-radius: 6px !important;
+  transition: all 0.2s ease;
+}
+
+body.airflow-dark-theme .chakra-button:hover {
+  background-color: #334155 !important;
+  border-color: #475569 !important;
+  color: #38bdf8 !important;
+}
+
+/* Chakra Breadcrumbs in Grid Header */
+body.airflow-dark-theme .chakra-breadcrumb__link,
+body.airflow-dark-theme .chakra-breadcrumb__item {
+  color: #f1f5f9 !important;
+}
+
+body.airflow-dark-theme .chakra-breadcrumb__separator {
+  color: #64748b !important;
+}
+
+/* Chakra Tabs (Details, Logs, XCom, Rendered Templates, Task Duration) */
+body.airflow-dark-theme .chakra-tabs__tablist {
+  background-color: #0f172a !important;
+  border-bottom: 1px solid #1e293b !important;
+}
+
+body.airflow-dark-theme .chakra-tabs__tab {
+  color: #94a3b8 !important;
+  font-weight: 500 !important;
+  border-bottom: 2px solid transparent !important;
+  background: transparent !important;
+  transition: all 0.15s ease;
+}
+
+body.airflow-dark-theme .chakra-tabs__tab:hover {
+  color: #38bdf8 !important;
+  background-color: #131c31 !important;
+}
+
+body.airflow-dark-theme .chakra-tabs__tab[aria-selected="true"] {
+  color: #38bdf8 !important;
+  border-bottom: 2px solid #38bdf8 !important;
+  font-weight: 600 !important;
+  background: transparent !important;
+}
+
+body.airflow-dark-theme .chakra-tabs__tab-panels,
+body.airflow-dark-theme .chakra-tabs__tab-panel {
+  background-color: #0b0f19 !important;
+  color: #cbd5e1 !important;
+}
+
+/* Chakra Menu & Dropdowns */
+body.airflow-dark-theme .chakra-menu__menu-list {
+  background-color: #0f172a !important;
+  border: 1px solid #1e293b !important;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.7) !important;
+  border-radius: 8px !important;
+}
+
+body.airflow-dark-theme .chakra-menu__menu-item {
+  background-color: #0f172a !important;
+  color: #cbd5e1 !important;
+}
+
+body.airflow-dark-theme .chakra-menu__menu-item:hover,
+body.airflow-dark-theme .chakra-menu__menu-item[data-hover] {
+  background-color: #1e293b !important;
+  color: #38bdf8 !important;
+}
+
+/* Chakra Accordion */
+body.airflow-dark-theme .chakra-accordion__item {
+  border-color: #1e293b !important;
+}
+
+body.airflow-dark-theme .chakra-accordion__button {
+  background-color: #0f172a !important;
+  color: #f1f5f9 !important;
+}
+
+body.airflow-dark-theme .chakra-accordion__panel {
+  background-color: #0b0f19 !important;
+  color: #cbd5e1 !important;
+}
+
+/* Chakra Tables & Striped Rows (Eliminating ALL Zebra Striping Glare) */
+html.airflow-dark-theme .chakra-table,
+body.airflow-dark-theme .chakra-table,
+html.airflow-dark-theme .chakra-table tbody,
+body.airflow-dark-theme .chakra-table tbody,
+html.airflow-dark-theme .chakra-table tr,
+body.airflow-dark-theme .chakra-table tr,
+html.airflow-dark-theme .chakra-table td,
+body.airflow-dark-theme .chakra-table td,
+html.airflow-dark-theme .chakra-table th,
+body.airflow-dark-theme .chakra-table th,
+html.airflow-dark-theme .chakra-table[data-variant="striped"] tbody tr:nth-of-type(odd) td,
+body.airflow-dark-theme .chakra-table[data-variant="striped"] tbody tr:nth-of-type(odd) td,
+html.airflow-dark-theme .chakra-table[data-variant="striped"] tbody tr:nth-of-type(even) td,
+body.airflow-dark-theme .chakra-table[data-variant="striped"] tbody tr:nth-of-type(even) td,
+html.airflow-dark-theme table.chakra-table tbody tr:nth-of-type(odd) td,
+body.airflow-dark-theme table.chakra-table tbody tr:nth-of-type(odd) td,
+html.airflow-dark-theme table.chakra-table tbody tr:nth-of-type(even) td,
+body.airflow-dark-theme table.chakra-table tbody tr:nth-of-type(even) td {
+  background-color: #0f172a !important;
+  color: #cbd5e1 !important;
+  border-color: #1e293b !important;
+}
+
+html.airflow-dark-theme .chakra-table[data-variant="striped"] tbody tr:nth-of-type(odd) td,
+body.airflow-dark-theme .chakra-table[data-variant="striped"] tbody tr:nth-of-type(odd) td {
+  background-color: #131c31 !important;
+}
+
+html.airflow-dark-theme .chakra-table tr:hover td,
+body.airflow-dark-theme .chakra-table tr:hover td {
+  background-color: #1e293b !important;
+  color: #f8fafc !important;
+}
+
+html.airflow-dark-theme .chakra-heading,
+body.airflow-dark-theme .chakra-heading {
+  color: #f1f5f9 !important;
+}
+
+/* Task Names & Grid Matrix Labels */
+body.airflow-dark-theme [data-testid="task-name"],
+body.airflow-dark-theme [data-testid="task-name"] span,
+body.airflow-dark-theme [data-testid="task-name"] p {
+  color: #f1f5f9 !important;
+  font-weight: 500 !important;
+}
+
+/* Grid Matrix Duration Chart axis */
+body.airflow-dark-theme svg text {
+  fill: #94a3b8 !important;
+}
+
+/* --------------------------------------------------------------------------
+   6. LOG VIEWER CONSOLE (Deep Black JetBrains Monospace)
+   Matching TikTok Production Error Tracing Console
+   -------------------------------------------------------------------------- */
+body.airflow-dark-theme pre,
+body.airflow-dark-theme code,
+body.airflow-dark-theme .chakra-code,
+body.airflow-dark-theme pre[aria-label="logs"],
+body.airflow-dark-theme .log-viewer,
+body.airflow-dark-theme #log-content,
+body.airflow-dark-theme .logs-container {
+  background-color: #030712 !important;
+  color: #f1f5f9 !important;
+  border: 1px solid #1e293b !important;
+  border-radius: 8px !important;
+  font-family: "JetBrains Mono", "Fira Code", "SFMono-Regular", Consolas, Menlo, monospace !important;
+  font-size: 12.5px !important;
+  line-height: 1.65 !important;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.4) !important;
+}
+
+/* Log group folding links */
+body.airflow-dark-theme pre a,
+body.airflow-dark-theme .chakra-code a {
+  color: #38bdf8 !important;
+  text-decoration: underline;
+}
+
+/* --------------------------------------------------------------------------
+   7. STANDARD CONTAINERS, CARDS & PANELS (Home, Security, Admin)
+   -------------------------------------------------------------------------- */
+body.airflow-dark-theme .container,
+body.airflow-dark-theme .container-fluid,
+body.airflow-dark-theme .card,
+body.airflow-dark-theme .card-body,
+body.airflow-dark-theme .panel,
+body.airflow-dark-theme .panel-default,
+body.airflow-dark-theme .panel-body,
+body.airflow-dark-theme .well,
+body.airflow-dark-theme .box,
+body.airflow-dark-theme .box-body,
+body.airflow-dark-theme .content,
+body.airflow-dark-theme .content-wrapper,
+body.airflow-dark-theme .content-container,
+body.airflow-dark-theme .table-responsive,
+body.airflow-dark-theme .dataTables_wrapper,
+body.airflow-dark-theme div#dags-container {
+  background-color: #0b0f19 !important;
+  border-color: #1e293b !important;
+  color: #cbd5e1 !important;
+}
+
+body.airflow-dark-theme .panel-default > .panel-heading,
+body.airflow-dark-theme .card-header,
+body.airflow-dark-theme .panel-heading {
+  background-color: #131c31 !important;
+  border-bottom: 1px solid #1e293b !important;
+  color: #f8fafc !important;
+}
+
+body.airflow-dark-theme .panel-footer,
+body.airflow-dark-theme .card-footer {
+  background-color: #0b0f19 !important;
+  border-top: 1px solid #1e293b !important;
+}
+
+/* --------------------------------------------------------------------------
+   8. DAGS TABLE & CELL STYLING (Zero Glare DataTables & Table Wrappers)
+   -------------------------------------------------------------------------- */
+body.airflow-dark-theme .dags-table-wrap,
+html.airflow-dark-theme .dags-table-wrap,
+body.airflow-dark-theme .dags-table-body,
+html.airflow-dark-theme .dags-table-body,
+body.airflow-dark-theme .dags-table-header,
+html.airflow-dark-theme .dags-table-header,
+body.airflow-dark-theme #main_content,
+html.airflow-dark-theme #main_content,
+body.airflow-dark-theme div[class*="dags-table"],
+html.airflow-dark-theme div[class*="dags-table"] {
+  background-color: #0b0f19 !important;
+  background: #0b0f19 !important;
+  border-color: #1e293b !important;
+}
+
+body.airflow-dark-theme table,
+body.airflow-dark-theme #dags,
+body.airflow-dark-theme table#dags,
+body.airflow-dark-theme .table,
+body.airflow-dark-theme .dataTable,
+body.airflow-dark-theme tbody,
+body.airflow-dark-theme thead,
+body.airflow-dark-theme tfoot {
+  background-color: #0f172a !important;
+  color: #cbd5e1 !important;
+  border-color: #1e293b !important;
+}
+
+body.airflow-dark-theme table tr,
+body.airflow-dark-theme #dags tr,
+body.airflow-dark-theme .table tr,
+body.airflow-dark-theme table#dags tr,
+body.airflow-dark-theme [role="row"],
+body.airflow-dark-theme .table-striped > tbody > tr,
+body.airflow-dark-theme .table-striped > tbody > tr:nth-of-type(odd),
+body.airflow-dark-theme .table-striped > tbody > tr:nth-of-type(even),
+body.airflow-dark-theme .table-hover > tbody > tr {
+  background-color: #0f172a !important;
+  color: #e2e8f0 !important;
+  border-bottom: 1px solid #1e293b !important;
+}
+
+body.airflow-dark-theme table td,
+body.airflow-dark-theme #dags td,
+body.airflow-dark-theme .table td,
+body.airflow-dark-theme table#dags td,
+body.airflow-dark-theme .table > tbody > tr > td,
+body.airflow-dark-theme .table > tfoot > tr > td,
+body.airflow-dark-theme [role="cell"] {
+  background-color: #0f172a !important;
+  color: #cbd5e1 !important;
+  border-top: 1px solid #1e293b !important;
+  border-bottom: 1px solid #1e293b !important;
+}
+
+body.airflow-dark-theme table th,
+body.airflow-dark-theme #dags th,
+body.airflow-dark-theme .table th,
+body.airflow-dark-theme table#dags th,
+body.airflow-dark-theme .table > thead > tr > th,
+body.airflow-dark-theme [role="columnheader"] {
+  background-color: #131c31 !important;
+  color: #94a3b8 !important;
+  border-bottom: 2px solid #1e293b !important;
+  border-top: none !important;
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 0.05em;
+}
+
+body.airflow-dark-theme table tr:hover,
+body.airflow-dark-theme table tr:hover td,
+body.airflow-dark-theme #dags tr:hover,
+body.airflow-dark-theme #dags tr:hover td,
+body.airflow-dark-theme .table > tbody > tr:hover > td {
+  background-color: #1e293b !important;
+  color: #f8fafc !important;
+}
+
+body.airflow-dark-theme table a,
+body.airflow-dark-theme #dags a,
+body.airflow-dark-theme .dags-table a {
+  color: #38bdf8 !important;
+  text-decoration: none;
+}
+
+body.airflow-dark-theme table a:hover,
+body.airflow-dark-theme #dags a:hover {
+  color: #7dd3fc !important;
+  text-decoration: underline;
+}
+
+/* More menu hover gradient fix - prevent #fff flash */
+body.airflow-dark-theme .dags-table-more__menu:hover:before,
+body.airflow-dark-theme tr:nth-child(2n) .dags-table-more__menu:hover:before,
+body.airflow-dark-theme tr:nth-child(2n):hover .dags-table-more__menu:hover:before,
+body.airflow-dark-theme tr:nth-child(odd):hover .dags-table-more__menu:hover:before {
+  background: linear-gradient(90deg, rgba(15, 23, 42, 0) 0, #131c31) !important;
+}
+
+body.airflow-dark-theme tr:nth-child(odd) .dags-table-more__menu:hover,
+body.airflow-dark-theme tr:nth-child(2n) .dags-table-more__menu:hover,
+body.airflow-dark-theme tr:nth-child(2n):hover .dags-table-more__menu:hover,
+body.airflow-dark-theme tr:nth-child(odd):hover .dags-table-more__menu:hover {
+  background-color: #131c31 !important;
+}
+
+/* --------------------------------------------------------------------------
+   8b. DAGS TABLE STATUS CIRCLES (Runs & Recent Tasks D3 SVG Rings)
+   -------------------------------------------------------------------------- */
+/* Dark Background for all Status Circles */
+body.airflow-dark-theme svg circle.has-svg-tooltip,
+body.airflow-dark-theme svg[id*="dag-run-"] circle,
+body.airflow-dark-theme svg[id*="task-instance-"] circle,
+body.airflow-dark-theme svg circle[id*="dag-run"],
+body.airflow-dark-theme svg circle[id*="task-instance"] {
+  fill: #0b0f19 !important;
+  transition: fill 0.2s ease, stroke-width 0.2s ease;
+}
+
+/* Hover state for Status Circles */
+body.airflow-dark-theme svg circle.has-svg-tooltip:hover,
+body.airflow-dark-theme svg[id*="dag-run-"] circle:hover,
+body.airflow-dark-theme svg[id*="task-instance-"] circle:hover {
+  fill: #1e293b !important;
+}
+
+/* Neutralize gainsboro/white empty task circles (count = 0) */
+body.airflow-dark-theme svg circle[stroke="gainsboro"],
+body.airflow-dark-theme svg circle[stroke="#dcdcdc"],
+body.airflow-dark-theme svg circle[stroke-width="1"] {
+  stroke: #1e293b !important;
+}
+
+/* Crisp Light Numbers inside the status circles */
+body.airflow-dark-theme svg[id*="dag-run-"] text,
+body.airflow-dark-theme svg[id*="task-instance-"] text,
+body.airflow-dark-theme svg g text {
+  fill: #f1f5f9 !important;
+  font-weight: 600 !important;
+}
+
+/* Loading dots before SVG is rendered */
+body.airflow-dark-theme .js-loading-dag-run-stats,
+body.airflow-dark-theme .js-loading-task-instance-stats {
+  color: #64748b !important;
+}
+
+/* --------------------------------------------------------------------------
+   8c. SELECT2 TAG FILTER & DROPDOWN (Filter DAGs by tag)
+   -------------------------------------------------------------------------- */
+body.airflow-dark-theme .select2-container,
+body.airflow-dark-theme .select2-container .select2-choices,
+body.airflow-dark-theme .select2-container-multi .select2-choices,
+body.airflow-dark-theme .select2-container--bootstrap .select2-selection,
+body.airflow-dark-theme .select2-container--default .select2-selection--multiple,
+body.airflow-dark-theme .select2-container--default .select2-selection--single {
+  background-color: #131c31 !important;
+  background: #131c31 !important;
+  border: 1px solid #334155 !important;
+  border-radius: 6px !important;
+  color: #f1f5f9 !important;
+  box-shadow: none !important;
+}
+
+body.airflow-dark-theme .select2-container-active .select2-choices,
+body.airflow-dark-theme .select2-container--bootstrap.select2-container--focus .select2-selection {
+  border-color: #38bdf8 !important;
+  box-shadow: 0 0 0 1px #38bdf8 !important;
+}
+
+/* Tag Choice Pills inside Filter */
+body.airflow-dark-theme .select2-container .select2-search-choice,
+body.airflow-dark-theme .select2-selection__choice {
+  background-color: #1e293b !important;
+  background: #1e293b !important;
+  border: 1px solid #334155 !important;
+  border-radius: 4px !important;
+  color: #38bdf8 !important;
+  padding: 3px 6px !important;
+  box-shadow: none !important;
+}
+
+body.airflow-dark-theme .select2-search-choice-close {
+  filter: invert(1) !important;
+}
+
+/* Input search field inside Select2 */
+body.airflow-dark-theme .select2-search-field input,
+body.airflow-dark-theme .select2-search input,
+body.airflow-dark-theme .select2-input {
+  background: transparent !important;
+  color: #f1f5f9 !important;
+  font-family: inherit !important;
+}
+
+body.airflow-dark-theme .select2-default {
+  color: #64748b !important;
+}
+
+/* Select2 Dropdown Popup */
+body.airflow-dark-theme .select2-drop,
+body.airflow-dark-theme .select2-dropdown,
+body.airflow-dark-theme .select2-drop-active {
+  background-color: #0f172a !important;
+  background: #0f172a !important;
+  border: 1px solid #1e293b !important;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.6) !important;
+  color: #cbd5e1 !important;
+}
+
+body.airflow-dark-theme .select2-results,
+body.airflow-dark-theme .select2-results__options {
+  background-color: #0f172a !important;
+}
+
+body.airflow-dark-theme .select2-results li,
+body.airflow-dark-theme .select2-results__option {
+  color: #cbd5e1 !important;
+}
+
+body.airflow-dark-theme .select2-results .select2-highlighted,
+body.airflow-dark-theme .select2-results__option--highlighted {
+  background-color: #1e293b !important;
+  color: #38bdf8 !important;
+}
+
+/* --------------------------------------------------------------------------
+   9. GRAPH VIEW (SVG DAG Canvas)
+   -------------------------------------------------------------------------- */
+body.airflow-dark-theme #svg-container,
+body.airflow-dark-theme svg#graph-svg {
+  background-color: #0b0f19 !important;
+}
+
+body.airflow-dark-theme g.node rect {
+  stroke: #334155 !important;
+}
+
+body.airflow-dark-theme g.node text {
+  fill: #f8fafc !important;
+}
+
+body.airflow-dark-theme g.edgePath path {
+  stroke: #64748b !important;
+}
+
+/* --------------------------------------------------------------------------
+   10. CODEMIRROR (Code View Tab)
+   -------------------------------------------------------------------------- */
+body.airflow-dark-theme .CodeMirror {
+  background-color: #050811 !important;
+  color: #e2e8f0 !important;
+  border: 1px solid #1e293b !important;
+  border-radius: 6px !important;
+}
+
+body.airflow-dark-theme .CodeMirror-gutters {
+  background-color: #050811 !important;
+  border-right: 1px solid #1e293b !important;
+}
+
+body.airflow-dark-theme .CodeMirror-linenumber {
+  color: #475569 !important;
+}
+
+/* --------------------------------------------------------------------------
+   11. FORM INPUTS, BUTTONS & BADGES
+   -------------------------------------------------------------------------- */
+body.airflow-dark-theme .btn-default,
+body.airflow-dark-theme .btn-secondary,
+body.airflow-dark-theme .btn-light {
+  background-color: #1e293b !important;
+  border-color: #334155 !important;
+  color: #f1f5f9 !important;
+}
+
+body.airflow-dark-theme .btn-default:hover,
+body.airflow-dark-theme .btn-secondary:hover {
+  background-color: #334155 !important;
+  border-color: #475569 !important;
+  color: #38bdf8 !important;
+}
+
+body.airflow-dark-theme .btn-primary {
+  background-color: #0284c7 !important;
+  border-color: #0369a1 !important;
+  color: #ffffff !important;
+}
+
+body.airflow-dark-theme input,
+body.airflow-dark-theme select,
+body.airflow-dark-theme textarea,
+body.airflow-dark-theme .form-control {
+  background-color: #131c31 !important;
+  border: 1px solid #334155 !important;
+  color: #f8fafc !important;
+  border-radius: 6px !important;
+}
+
+body.airflow-dark-theme .label,
+body.airflow-dark-theme .badge,
+body.airflow-dark-theme span.badge {
+  background-color: #1e293b !important;
+  color: #94a3b8 !important;
+  border: 1px solid #334155 !important;
+  font-weight: 500 !important;
+}
+
+/* --------------------------------------------------------------------------
+   11b. CLUSTER ACTIVITY (HOME) CHAKRA UI CONTROLS & DATEPICKER
+   -------------------------------------------------------------------------- */
+/* Historical Metrics date inputs */
+body.airflow-dark-theme #react-container input,
+body.airflow-dark-theme #react-container .chakra-input,
+body.airflow-dark-theme #react-container input[type="date"],
+body.airflow-dark-theme #react-container input[type="time"],
+body.airflow-dark-theme #react-container input[type="text"],
+body.airflow-dark-theme #react-container .chakra-input__group,
+body.airflow-dark-theme #react-container div[style*="white"] > input,
+body.airflow-dark-theme #react-container div[style*="backgroundColor: white"] {
+  background-color: #131c31 !important;
+  background: #131c31 !important;
+  color: #f1f5f9 !important;
+  border: 1px solid #334155 !important;
+  border-radius: 6px !important;
+}
+
+body.airflow-dark-theme #react-container input:focus,
+body.airflow-dark-theme #react-container .chakra-input:focus {
+  border-color: #38bdf8 !important;
+  box-shadow: 0 0 0 1px #38bdf8 !important;
+}
+
+/* Clear Filters Reset Button */
+body.airflow-dark-theme #react-container button[aria-label="Reset filters"],
+body.airflow-dark-theme #react-container button.chakra-button[style*="white"],
+body.airflow-dark-theme #react-container button.chakra-button {
+  background-color: #1e293b !important;
+  background: #1e293b !important;
+  color: #38bdf8 !important;
+  border: 1px solid #334155 !important;
+  border-radius: 6px !important;
+}
+
+body.airflow-dark-theme #react-container button[aria-label="Reset filters"]:hover,
+body.airflow-dark-theme #react-container button.chakra-button:hover {
+  background-color: #334155 !important;
+  background: #334155 !important;
+  color: #7dd3fc !important;
+  border-color: #38bdf8 !important;
+}
+
+/* Historical Metrics Container & Sub-bar */
+body.airflow-dark-theme #react-container div[style*="blackAlpha"],
+body.airflow-dark-theme #react-container div[style*="rgba(0, 0, 0, 0.08)"] {
+  background-color: #0f172a !important;
+  background: #0f172a !important;
+  border: 1px solid #1e293b !important;
+  border-radius: 8px !important;
+}
+
+/* Bootstrap / Native DateTimePicker Widget popup */
+body.airflow-dark-theme .bootstrap-datetimepicker-widget,
+body.airflow-dark-theme .datepicker {
+  background-color: #0f172a !important;
+  border: 1px solid #1e293b !important;
+  color: #cbd5e1 !important;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.6) !important;
+}
+
+body.airflow-dark-theme .bootstrap-datetimepicker-widget table td,
+body.airflow-dark-theme .bootstrap-datetimepicker-widget table th,
+body.airflow-dark-theme .datepicker table td,
+body.airflow-dark-theme .datepicker table th {
+  color: #cbd5e1 !important;
+}
+
+body.airflow-dark-theme .bootstrap-datetimepicker-widget table td.day:hover,
+body.airflow-dark-theme .bootstrap-datetimepicker-widget table td.hour:hover,
+body.airflow-dark-theme .bootstrap-datetimepicker-widget table td.minute:hover,
+body.airflow-dark-theme .bootstrap-datetimepicker-widget table thead tr:first-child th:hover {
+  background-color: #1e293b !important;
+  color: #38bdf8 !important;
+}
+
+body.airflow-dark-theme .bootstrap-datetimepicker-widget table td.active,
+body.airflow-dark-theme .bootstrap-datetimepicker-widget table td.active:hover {
+  background-color: #0284c7 !important;
+  color: #ffffff !important;
+}
+
+/* --------------------------------------------------------------------------
+   12. PAGINATION, MODALS & FOOTER
+   -------------------------------------------------------------------------- */
+body.airflow-dark-theme .pagination > li > a,
+body.airflow-dark-theme .pagination > li > span {
+  background-color: #131c31 !important;
+  border-color: #1e293b !important;
+  color: #cbd5e1 !important;
+}
+
+body.airflow-dark-theme .pagination > li.active > a,
+body.airflow-dark-theme .pagination > li.active > span,
+body.airflow-dark-theme .pagination > li > a:hover {
+  background-color: #1e293b !important;
+  border-color: #38bdf8 !important;
+  color: #38bdf8 !important;
+}
+
+body.airflow-dark-theme .dropdown-menu {
+  background-color: #0f172a !important;
+  border: 1px solid #1e293b !important;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.6) !important;
+}
+
+body.airflow-dark-theme .dropdown-menu > li > a {
+  color: #cbd5e1 !important;
+}
+
+body.airflow-dark-theme .dropdown-menu > li > a:hover {
+  background-color: #1e293b !important;
+  color: #38bdf8 !important;
+}
+
+body.airflow-dark-theme .modal-content {
+  background-color: #0f172a !important;
+  border: 1px solid #1e293b !important;
+  color: #f8fafc !important;
+}
+
+body.airflow-dark-theme footer,
+html.airflow-dark-theme footer,
+body.airflow-dark-theme .footer,
+html.airflow-dark-theme .footer,
+body.airflow-dark-theme #footer,
+html.airflow-dark-theme #footer,
+body.airflow-dark-theme footer.footer,
+body.airflow-dark-theme .footer .container,
+body.airflow-dark-theme div.nav-fixed-bottom {
+  background-color: #080d1a !important;
+  background: #080d1a !important;
+  color: #64748b !important;
+  border-top: 1px solid #1e293b !important;
+}
+
+body.airflow-dark-theme .footer a {
+  color: #38bdf8 !important;
+}
+
+/* --------------------------------------------------------------------------
+   13. DARK SCROLLBARS
+   -------------------------------------------------------------------------- */
+body.airflow-dark-theme ::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+body.airflow-dark-theme ::-webkit-scrollbar-track {
+  background: #0b0f19;
+}
+
+body.airflow-dark-theme ::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 4px;
+}
+
+body.airflow-dark-theme ::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
+
+/* --------------------------------------------------------------------------
+   14. NATIVE THEME TOGGLE CLEANUP (Remove redundant oval button)
+   -------------------------------------------------------------------------- */
+#theme-toggle-universal-btn,
+#theme-toggle-universal-container {
+  display: none !important;
+}
+
+/* --------------------------------------------------------------------------
+   15. AIRFLOW 3.0 MODERN LEFT VERTICAL NAVIGATION SIDEBAR (Universal Dual-Mode)
+   -------------------------------------------------------------------------- */
+#airflow-v3-sidebar {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  bottom: 0 !important;
+  width: 58px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  padding: 10px 0 !important;
+  z-index: 99999 !important;
+  user-select: none !important;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.4) !important;
+}
+
+/* Dark Mode Sidebar */
+html.airflow-dark-theme #airflow-v3-sidebar,
+body.airflow-dark-theme #airflow-v3-sidebar {
+  background-color: #080d1a !important;
+  border-right: 1px solid #1e293b !important;
+}
+
+/* Light Mode Sidebar */
+html:not(.airflow-dark-theme) #airflow-v3-sidebar,
+body:not(.airflow-dark-theme) #airflow-v3-sidebar {
+  background-color: #ffffff !important;
+  border-right: 1px solid #e2e8f0 !important;
+}
+
+#airflow-v3-sidebar .sidebar-logo {
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.25s ease;
+}
+
+#airflow-v3-sidebar .sidebar-logo svg {
+  width: 30px;
+  height: 30px;
+  display: block;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+#airflow-v3-sidebar .sidebar-logo:hover svg {
+  transform: rotate(90deg) scale(1.15);
+}
+
+#airflow-v3-sidebar .sidebar-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 100%;
+  align-items: center;
+  flex: 1;
+}
+
+#airflow-v3-sidebar .sidebar-item {
+  width: 46px;
+  height: 46px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+/* Dark Mode Items */
+html.airflow-dark-theme #airflow-v3-sidebar .sidebar-item,
+body.airflow-dark-theme #airflow-v3-sidebar .sidebar-item {
+  color: #94a3b8;
+}
+
+html.airflow-dark-theme #airflow-v3-sidebar .sidebar-item:hover,
+body.airflow-dark-theme #airflow-v3-sidebar .sidebar-item:hover {
+  background-color: #1e293b;
+  color: #38bdf8;
+}
+
+html.airflow-dark-theme #airflow-v3-sidebar .sidebar-item.active,
+body.airflow-dark-theme #airflow-v3-sidebar .sidebar-item.active {
+  background-color: #131c31;
+  color: #38bdf8;
+}
+
+html.airflow-dark-theme #airflow-v3-sidebar .sidebar-item.active::before,
+body.airflow-dark-theme #airflow-v3-sidebar .sidebar-item.active::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 8px;
+  bottom: 8px;
+  width: 3px;
+  background-color: #38bdf8;
+  border-radius: 0 4px 4px 0;
+  box-shadow: 0 0 8px #38bdf8;
+}
+
+/* Light Mode Items */
+html:not(.airflow-dark-theme) #airflow-v3-sidebar .sidebar-item,
+body:not(.airflow-dark-theme) #airflow-v3-sidebar .sidebar-item {
+  color: #64748b;
+}
+
+html:not(.airflow-dark-theme) #airflow-v3-sidebar .sidebar-item:hover,
+body:not(.airflow-dark-theme) #airflow-v3-sidebar .sidebar-item:hover {
+  background-color: #f1f5f9;
+  color: #0284c7;
+}
+
+html:not(.airflow-dark-theme) #airflow-v3-sidebar .sidebar-item.active,
+body:not(.airflow-dark-theme) #airflow-v3-sidebar .sidebar-item.active {
+  background-color: #e0f2fe;
+  color: #0284c7;
+}
+
+html:not(.airflow-dark-theme) #airflow-v3-sidebar .sidebar-item.active::before,
+body:not(.airflow-dark-theme) #airflow-v3-sidebar .sidebar-item.active::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 8px;
+  bottom: 8px;
+  width: 3px;
+  background-color: #0284c7;
+  border-radius: 0 4px 4px 0;
+  box-shadow: 0 0 8px #0284c7;
+}
+
+#airflow-v3-sidebar .sidebar-item svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+#airflow-v3-sidebar .sidebar-item span.label {
+  font-size: 9.5px;
+  font-weight: 500;
+  margin-top: 3px;
+  color: inherit;
+  background: transparent;
+  padding: 0;
+  border: none;
+  letter-spacing: 0.02em;
+}
+
+#airflow-v3-sidebar .sidebar-footer {
+  margin-top: auto;
+  padding-bottom: 6px;
+}
+
+/* Page body padding offset to accommodate Left Sidebar cleanly */
+body.with-v3-sidebar,
+body[class*="with-v3-sidebar"] {
+  padding-left: 58px !important;
+}
+
+body.with-v3-sidebar .navbar,
+body.with-v3-sidebar nav.navbar {
+  left: 58px !important;
+  width: calc(100% - 58px) !important;
+}
+
+/* Hide legacy bulky text menu from top navbar when Sidebar is active */
+body.with-v3-sidebar .navbar .navbar-collapse > .navbar-nav:first-child {
+  display: none !important;
+}
+
+/* Modern Compact Brand display in Navbar */
+body.with-v3-sidebar .navbar-brand {
+  display: none !important;
+}

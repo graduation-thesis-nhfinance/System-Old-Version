@@ -1,0 +1,120 @@
+services:
+  # ---------------------------------------------------------------------------
+  # MinIO Object Storage (S3 API & Web Console)
+  # Credentials: admin123 / admin123
+  # ---------------------------------------------------------------------------
+  minio_s3:
+    image: elestio/minio:latest
+    container_name: minio_s3
+    restart: always
+    networks:
+      default:
+        aliases:
+          - minio
+          - minio-s3
+    ports:
+      - "127.0.0.1:${MINIO_API_PORT:?Set MINIO_API_PORT in .env}:9000"
+      - "127.0.0.1:${MINIO_CONSOLE_PORT:?Set MINIO_CONSOLE_PORT in .env}:9001"
+    environment:
+      MINIO_ROOT_USER: ${MINIO_ACCESS_KEY:?Set MINIO_ACCESS_KEY in .env}
+      MINIO_ROOT_PASSWORD: ${MINIO_SECRET_KEY:?Set MINIO_SECRET_KEY in .env}
+    command: server /data --console-address ":9001"
+    volumes:
+      - ./data/minio:/data
+    healthcheck:
+      test: ["CMD", "mc", "ready", "local"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  # ---------------------------------------------------------------------------
+  # MinIO Branded UI Proxy (Nginx Reverse Proxy - Theme & Logo Injection)
+  # Port: 9091 (Non-intrusive, keeps Port 9000 & 9001 100% untouched)
+  # ---------------------------------------------------------------------------
+  minio_console_proxy:
+    image: nginx:alpine
+    container_name: minio_console_proxy
+    restart: always
+    ports:
+      - "127.0.0.1:9091:9091"
+    volumes:
+      - ./config/minio_theme/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./config/minio_theme/custom_minio_theme.css:/etc/nginx/theme/custom_minio_theme.css:ro
+      - ./config/minio_theme/js:/etc/nginx/theme/js:ro
+    depends_on:
+      - minio_s3
+
+  # ---------------------------------------------------------------------------
+  # MinIO Bucket Auto-Initialization Task
+  # ---------------------------------------------------------------------------
+  minio_init:
+    image: elestio/minio:latest
+    container_name: minio_init
+    depends_on:
+      minio_s3:
+        condition: service_healthy
+    entrypoint: >
+      /bin/sh -c "
+      /usr/bin/mc alias set myminio http://minio_s3:9000 ${MINIO_ACCESS_KEY:?Set MINIO_ACCESS_KEY in .env} ${MINIO_SECRET_KEY:?Set MINIO_SECRET_KEY in .env};
+      /usr/bin/mc mb --ignore-existing myminio/${BUCKET_BRONZE:-crypto-bronze};
+      /usr/bin/mc mb --ignore-existing myminio/${BUCKET_SILVER:-crypto-silver};
+      /usr/bin/mc mb --ignore-existing myminio/${BUCKET_GOLD:-crypto-gold};
+      /usr/bin/mc anonymous set download myminio/${BUCKET_BRONZE:-crypto-bronze};
+      /usr/bin/mc anonymous set download myminio/${BUCKET_SILVER:-crypto-silver};
+      /usr/bin/mc anonymous set download myminio/${BUCKET_GOLD:-crypto-gold};
+      echo 'MinIO Medallion Buckets Initialized Successfully!';
+      exit 0;
+      "
+
+  # ---------------------------------------------------------------------------
+  # ClickHouse Real-time OLAP Analytical Engine
+  # Credentials: admin123 / admin123
+  # ---------------------------------------------------------------------------
+  clickhouse_server:
+    image: clickhouse/clickhouse-server@sha256:f90a77560f72b10802106ee49e9870e41668cbc496e280c3911f6e3b216657f3
+    container_name: clickhouse_server
+    restart: always
+    ports:
+      - "127.0.0.1:${CLICKHOUSE_HTTP_PORT:?Set CLICKHOUSE_HTTP_PORT in .env}:8123"   # ClickHouse HTTP Interface / Web UI
+      - "127.0.0.1:${CLICKHOUSE_NATIVE_PORT:?Set CLICKHOUSE_NATIVE_PORT in .env}:9000"   # ClickHouse Native TCP Interface (mapped to 9004 on host)
+    environment:
+      CLICKHOUSE_USER: ${CLICKHOUSE_USER:?Set CLICKHOUSE_USER in .env}
+      CLICKHOUSE_PASSWORD: ${CLICKHOUSE_PASSWORD:?Set CLICKHOUSE_PASSWORD in .env}
+      CLICKHOUSE_DEFAULT_USER_PASSWORD: ${CLICKHOUSE_PASSWORD:?Set CLICKHOUSE_PASSWORD in .env}
+      CLICKHOUSE_DEFAULT_ACCESS_MANAGEMENT: 1
+    volumes:
+      - ./data/clickhouse:/var/lib/clickhouse
+      - ./sql/init_clickhouse_tables.sql:/docker-entrypoint-initdb.d/init_tables.sql
+      - ./config/clickhouse/disable_system_logs.xml:/etc/clickhouse-server/config.d/disable_system_logs.xml:ro
+    ulimits:
+      nofile:
+        soft: 262144
+        hard: 262144
+    healthcheck:
+      test: ["CMD", "wget", "--spider", "-q", "http://localhost:8123/ping"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  # ---------------------------------------------------------------------------
+  # PostgreSQL 15 Relational Metadata DB
+  # Credentials: admin123 / admin123
+  # ---------------------------------------------------------------------------
+  postgres:
+    image: postgres:15-alpine
+    container_name: sys05_postgres
+    restart: always
+    ports:
+      - "127.0.0.1:${POSTGRES_HOST_PORT:?Set POSTGRES_HOST_PORT in .env}:5432"
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:?Set POSTGRES_USER in .env}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in .env}
+      POSTGRES_DB: ${POSTGRES_DB:?Set POSTGRES_DB in .env}
+    volumes:
+      - ./data/postgres:/var/lib/postgresql/data
+      - ./sql/03_init_postgres_medallion_layers.sql:/docker-entrypoint-initdb.d/03_init_postgres_medallion_layers.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:?Set POSTGRES_USER in .env} -d ${POSTGRES_DB:?Set POSTGRES_DB in .env}"]
+      interval: 5s
+      timeout: 5s
+      retries: 5

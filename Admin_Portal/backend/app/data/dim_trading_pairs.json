@@ -1,0 +1,68 @@
+[
+  {
+    "pair_id": 1,
+    "base_coin": "BTC",
+    "quote_coin": "USDT",
+    "trading_pair": "BTC/USDT",
+    "symbol": "BTCUSDT",
+    "market_type": "SPOT_FUTURES",
+    "category": "crypto_popular",
+    "is_active": 1,
+    "updated_at": "2026-10-02 16:02:59"
+  },
+  {
+    "pair_id": 2,
+    "base_coin": "ETH",
+    "quote_coin": "USDT",
+    "trading_pair": "ETH/USDT",
+    "symbol": "ETHUSDT",
+    "market_type": "SPOT_FUTURES",
+    "category": "crypto_popular",
+    "is_active": 1,
+    "updated_at": "2026-10-02 16:02:59"
+  },
+  {
+    "pair_id": 3,
+    "base_coin": "BNB",
+    "quote_coin": "USDT",
+    "trading_pair": "BNB/USDT",
+    "symbol": "BNBUSDT",
+    "market_type": "SPOT_FUTURES",
+    "category": "crypto_popular",
+    "is_active": 1,
+    "updated_at": "2026-10-02 16:02:59"
+  },
+  {
+    "pair_id": 4,
+    "base_coin": "AAPLB",
+    "quote_coin": "USDT",
+    "trading_pair": "AAPLB/USDT",
+    "symbol": "AAPLBUSDT",
+    "market_type": "SPOT",
+    "category": "equity_token",
+    "is_active": 1,
+    "updated_at": "2026-10-02 16:02:59"
+  },
+  {
+    "pair_id": 5,
+    "base_coin": "AMZNB",
+    "quote_coin": "USDT",
+    "trading_pair": "AMZNB/USDT",
+    "symbol": "AMZNBUSDT",
+    "market_type": "SPOT",
+    "category": "equity_token",
+    "is_active": 1,
+    "updated_at": "2026-10-02 16:02:59"
+  },
+  {
+    "pair_id": 6,
+    "base_coin": "DELLB",
+    "quote_coin": "USDT",
+    "trading_pair": "DELLB/USDT",
+    "symbol": "DELLBUSDT",
+    "market_type": "SPOT",
+    "category": "equity_token",
+    "is_active": 1,
+    "updated_at": "2026-10-02 16:02:59"
+  }
+]
